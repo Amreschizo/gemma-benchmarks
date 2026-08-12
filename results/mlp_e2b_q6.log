@@ -1,0 +1,9 @@
+Testing batiai/gemma4-e2b:q6
+  [PASS] Twilight Sparkle: FiM=6 EG=0
+  [PARTIAL] Rainbow Dash: FiM=2 EG=0
+  [PARTIAL] Pinkie Pie: FiM=2 EG=0
+  [PARTIAL] Rarity: FiM=2 EG=0
+  [FAIL] Applejack: FiM=1 EG=0
+  [PARTIAL] Fluttershy: FiM=2 EG=0
+  [PASS] Princess Celestia: FiM=5 EG=0
+Done

@@ -1,0 +1,102 @@
+Gemma 4 Speed Benchmark
+Ollama host: http://127.0.0.1:11435
+Models: gemma4:e2b, gemma4:e4b, batiai/gemma4-e2b:q6, batiai/gemma4-e4b:q6
+Testing models: gemma4:e2b, gemma4:e4b
+
+=== Warming up gemma4:e2b ===
+  Benchmarking: short_generation
+    run 1: 0 tok, 0.0 tok/s, TTFT=0ms
+    run 2: 0 tok, 0.0 tok/s, TTFT=0ms
+    run 3: 0 tok, 0.0 tok/s, TTFT=0ms
+  Benchmarking: medium_generation
+    run 1: 0 tok, 0.0 tok/s, TTFT=0ms
+    run 2: 0 tok, 0.0 tok/s, TTFT=0ms
+    run 3: 0 tok, 0.0 tok/s, TTFT=0ms
+  Benchmarking: reasoning
+    run 1: 0 tok, 0.0 tok/s, TTFT=0ms
+    run 2: 0 tok, 0.0 tok/s, TTFT=0ms
+    run 3: 0 tok, 0.0 tok/s, TTFT=0ms
+
+=== Warming up gemma4:e4b ===
+  Benchmarking: short_generation
+    run 1: 20 tok, 9.46 tok/s, TTFT=2437.35ms
+    run 2: 6 tok, 2.84 tok/s, TTFT=4256.24ms
+    run 3: 6 tok, 2.84 tok/s, TTFT=4238.99ms
+  Benchmarking: medium_generation
+    run 1: 311 tok, 73.15 tok/s, TTFT=3850.23ms
+    run 2: 308 tok, 72.43 tok/s, TTFT=6040.15ms
+    run 3: 308 tok, 72.17 tok/s, TTFT=6023.01ms
+  Benchmarking: reasoning
+    run 1: 0 tok, 0.0 tok/s, TTFT=0ms
+    run 2: 0 tok, 0.0 tok/s, TTFT=0ms
+    run 3: 0 tok, 0.0 tok/s, TTFT=0ms
+
+Results saved to /home/amreschizo/gemma test/results/speed_results.json
+
+=== SUMMARY ===
+{
+  "gemma4:e2b": {
+    "short_generation": {
+      "ttft_ms_avg": 0,
+      "ttft_ms_min": 0,
+      "total_time_ms_avg": 2519.69,
+      "tokens_per_sec_avg": 0.0,
+      "tokens_per_sec_max": 0.0,
+      "completion_tokens_avg": 0,
+      "prompt_eval_ms_avg": 15.88,
+      "eval_ms_avg": 1401.89
+    },
+    "medium_generation": {
+      "ttft_ms_avg": 0,
+      "ttft_ms_min": 0,
+      "total_time_ms_avg": 5191.45,
+      "tokens_per_sec_avg": 0.0,
+      "tokens_per_sec_max": 0.0,
+      "completion_tokens_avg": 0,
+      "prompt_eval_ms_avg": 16.98,
+      "eval_ms_avg": 2806.44
+    },
+    "reasoning": {
+      "ttft_ms_avg": 0,
+      "ttft_ms_min": 0,
+      "total_time_ms_avg": 3327.44,
+      "tokens_per_sec_avg": 0.0,
+      "tokens_per_sec_max": 0.0,
+      "completion_tokens_avg": 0,
+      "prompt_eval_ms_avg": 16.89,
+      "eval_ms_avg": 1406.39
+    }
+  },
+  "gemma4:e4b": {
+    "short_generation": {
+      "ttft_ms_avg": 3644.19,
+      "ttft_ms_min": 2437.35,
+      "total_time_ms_avg": 3725.92,
+      "tokens_per_sec_avg": 5.05,
+      "tokens_per_sec_max": 9.46,
+      "completion_tokens_avg": 10.7,
+      "prompt_eval_ms_avg": 23.24,
+      "eval_ms_avg": 2111.7
+    },
+    "medium_generation": {
+      "ttft_ms_avg": 5304.46,
+      "ttft_ms_min": 3850.23,
+      "total_time_ms_avg": 7875.77,
+      "tokens_per_sec_avg": 72.58,
+      "tokens_per_sec_max": 73.15,
+      "completion_tokens_avg": 309,
+      "prompt_eval_ms_avg": 25.19,
+      "eval_ms_avg": 4257.27
+    },
+    "reasoning": {
+      "ttft_ms_avg": 0,
+      "ttft_ms_min": 0,
+      "total_time_ms_avg": 5035.06,
+      "tokens_per_sec_avg": 0.0,
+      "tokens_per_sec_max": 0.0,
+      "completion_tokens_avg": 0,
+      "prompt_eval_ms_avg": 25.88,
+      "eval_ms_avg": 2129.86
+    }
+  }
+}

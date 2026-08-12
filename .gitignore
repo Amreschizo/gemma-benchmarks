@@ -1,0 +1,31 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# Secrets (never commit)
+.env
+.env.*
+*.pem
+credentials.json
+**/hf_token*
+
+# Large local inference artifacts (download separately)
+ollama-models/
+bin/ollama-linux-amd64.tar*
+bin/bin/ollama
+
+# Hugging Face / torch caches (models pulled at runtime)
+.cache/
+*.safetensors
+*.gguf
+*.bin
+
+# Editor / OS
+.DS_Store
+*.swp
+.idea/
+.vscode/

@@ -1,0 +1,6 @@
+# Pin versions used for vLLM Gemma 4 stack (Aug 2026)
+# Ollama benchmarks use stdlib only (urllib); no pip deps required.
+vllm==0.27.1
+transformers==5.14.1
+# torch is installed as vLLM dependency; recorded for reproducibility:
+# torch==2.13.0

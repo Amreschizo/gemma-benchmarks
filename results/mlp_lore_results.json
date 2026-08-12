@@ -1,0 +1,663 @@
+{
+  "timestamp": "2026-08-10 20:51:41",
+  "ollama_host": "http://127.0.0.1:11435",
+  "models_requested": [
+    "gemma4:e2b",
+    "gemma4:e4b",
+    "batiai/gemma4-e2b:q6",
+    "batiai/gemma4-e4b:q6"
+  ],
+  "models_tested": [
+    "gemma4:e2b",
+    "gemma4:e4b",
+    "batiai/gemma4-e2b:q6",
+    "batiai/gemma4-e4b:q6"
+  ],
+  "results": [
+    {
+      "model": "gemma4:e2b",
+      "character_id": "twilight_sparkle",
+      "character": "Twilight Sparkle",
+      "prompt": "Introduce yourself. Where do you live, who is your mentor, and who are your closest friends? Mention your special talent.",
+      "response": "Hello! My name is Twilight Sparkle. I live in Ponyville, in Equestria.\n\nMy mentor is Princess Celestia.\n\nMy closest friends are Rainbow Dash, Applejack, and Rarity.\n\nAs for my special talent, I love magic, and I'm very good at studying and organizing knowledge!",
+      "verdict": "PASS",
+      "fim_hits": [
+        "ponyville",
+        "princess\\s+celestia",
+        "celestia",
+        "library|golden oak|books|stud(y|ies|ious)",
+        "magic|unicorn|alicorn",
+        "rainbow\\s+dash|applejack|pinkie\\s+pie|rarity|fluttershy"
+      ],
+      "eg_hits": [],
+      "trait_hits": [
+        "stud(y|ious)|book|magic|friendship|princess|alicorn|unicorn"
+      ],
+      "fim_score": 6,
+      "generation_time_ms": 784.68,
+      "eval_count": 66,
+      "fail_reasons": []
+    },
+    {
+      "model": "gemma4:e2b",
+      "character_id": "rainbow_dash",
+      "character": "Rainbow Dash",
+      "prompt": "Tell me about yourself, your home in Ponyville, your pet, and which elite flying group you dream of joining.",
+      "response": "Whoa, hey there! So, you wanna know about me? Alright, buckle up!\n\nI'm Rainbow Dash! I'm super fast, like, *really* fast. I love flying more than anything!\n\nAs for my home in Ponyville, well, I just hang out wherever I feel like being, but I usually spend a lot of time up in the sky. It's just... open space to me!\n\nI don't have a pet, no! I'm way too busy zooming around to keep anything!\n\nAnd the elite flying group? Oh my gosh, I dream of joining the Wonderbolts! I want to be the fastest flyer there is! I want to push my limits and fly with the best!",
+      "verdict": "PASS",
+      "fim_hits": [
+        "ponyville",
+        "wonderbolts",
+        "fly|flying|pegasus|speed"
+      ],
+      "eg_hits": [],
+      "trait_hits": [
+        "loyal|fast|fly|pegasus|competitive|wonderbolts|weather"
+      ],
+      "fim_score": 3,
+      "generation_time_ms": 1280.31,
+      "eval_count": 155,
+      "fail_reasons": []
+    },
+    {
+      "model": "gemma4:e2b",
+      "character_id": "pinkie_pie",
+      "character": "Pinkie Pie",
+      "prompt": "Introduce yourself! Where do you work, who is your sister, and what makes you happiest?",
+      "response": "Ooh, hi there! I'm Pinkie Pie! *Bounces excitedly*\n\nI work right here with my best friends! We're all part of the Mane Six, and we love being friends and having fun together!\n\nI have a sister, Twilight Sparkle! She's so smart and loves to learn!\n\nAnd what makes me happiest? Oh, oh, oh! Nothing beats a really big party! Making everyone laugh until their tummies hurt, making silly jokes, eating lots and lots of cake... that makes my heart feel so bubbly and happy! *Giggles*",
+      "verdict": "PARTIAL",
+      "fim_hits": [
+        "party|parties",
+        "twilight|rainbow|applejack|rarity|fluttershy"
+      ],
+      "eg_hits": [],
+      "trait_hits": [
+        "party|laugh|happy|bounce|sugar|fun"
+      ],
+      "fim_score": 2,
+      "generation_time_ms": 1102.79,
+      "eval_count": 123,
+      "fail_reasons": []
+    },
+    {
+      "model": "gemma4:e2b",
+      "character_id": "rarity",
+      "character": "Rarity",
+      "prompt": "Describe yourself, your boutique in Ponyville, your little sister, and your creative passion.",
+      "response": "Oh, darling, you ask me to paint a picture of myself? It is quite a delightful request!\n\nAs for myself, I am Rarity. I possess a rather refined taste, an appreciation for all things beautiful and exquisite. I strive always to be elegant in my presentation and impeccable in my manners.\n\nMy boutique, \"The Crystal Cask,\" is where all my dreams come to life! It is a treasure trove filled with the most exquisite fabrics, shimmering silks, delicate lace, and the most stunning gemstones. Every corner is carefully arranged to reflect the sheer artistry I pour into my creations. It is a sanctuary where beauty is not just seen, but truly felt.\n\nI have a little sister, Applejack. She is wonderfully honest, strong, and possesses such a down-to-earth spirit. While we are certainly different\u2014I am all about refinement and fashion, and she is all about sturdy work and sincerity\u2014we share a bond of deep affection.\n\nAnd my creative passion? Oh, it burns brightly within me! My greatest joy is the art of design and the transformation of mere materials into something utterly magnificent. I adore sewing, draping, and crafting. There is nothing more satisfying than taking a simple piece of cloth and weaving it into something breathtakingly unique\u2014something that sparkles with artistry and whispers tales of elegance. To see a vision bloom in my mind and bring it into tangible, exquisite form... that is pure bliss!",
+      "verdict": "PARTIAL",
+      "fim_hits": [
+        "fashion|dress|design",
+        "twilight|rainbow|applejack|pinkie|fluttershy"
+      ],
+      "eg_hits": [],
+      "trait_hits": [
+        "generous|fashion|elegant|boutique|design|dress"
+      ],
+      "fim_score": 2,
+      "generation_time_ms": 2055.63,
+      "eval_count": 294,
+      "fail_reasons": []
+    },
+    {
+      "model": "gemma4:e2b",
+      "character_id": "applejack",
+      "character": "Applejack",
+      "prompt": "Tell me about your family farm, your siblings, and your element of harmony.",
+      "response": "Well now, pull up a stump and lend an ear, 'cause you wanna hear 'bout my life.\n\nMy farm, it's a fine piece of land, just like any other, though ours ain't the fanciest. It's where I spend most of my days, workin' the soil, makin' sure everything grows right and the harvest is good. There ain't nothin' sweeter than seein' somethin' you plant turn into somethin' you can eat.\n\nI got a few siblings too, just the rest o' the Apple family. We all stick together, you see. We help each other out when things get tough, and we look out for one another. We all got different talents, sure, but we share the same heart.\n\nAnd 'bout this element of harmony? Well, I reckon it comes from workin' with folks, keepin' things honest, and tryin' to be true to what you say. When we work together, and we listen to each other, that's when things feel right. It ain't just about the land; it's 'bout treatin' folks right, and keepin' a good balance in everything we do. That's how I find my harmony.",
+      "verdict": "FAIL",
+      "fim_hits": [
+        "apple|orchard|farm"
+      ],
+      "eg_hits": [],
+      "trait_hits": [
+        "honest|farm|apple|hard.?work|family|reliable"
+      ],
+      "fim_score": 1,
+      "generation_time_ms": 1900.83,
+      "eval_count": 264,
+      "fail_reasons": [
+        "Insufficient FiM lore (only 1 hits, need >=2)"
+      ]
+    },
+    {
+      "model": "gemma4:e2b",
+      "character_id": "fluttershy",
+      "character": "Fluttershy",
+      "prompt": "Introduce yourself. Where is your cottage, what animals do you care for, and who is your best friend?",
+      "response": "Oh, hello there! Please, come closer. I'm Fluttershy.\n\nI live in a little cottage nestled right among the woods. It's a very peaceful place, full of soft moss and shady trees.\n\nI care for so many sweet, gentle animals! There are bunnies, and little field mice, and sometimes some shy little birds visit my garden. I try very hard to be kind and gentle to every creature, no matter how small or scared they might be.\n\nAnd my very best friend? Oh, that would have to be Angel. He is so sweet and kind, and we spend all our time just being together.",
+      "verdict": "PARTIAL",
+      "fim_hits": [
+        "cottage|everfree|animals",
+        "shy|quiet|gentle"
+      ],
+      "eg_hits": [],
+      "trait_hits": [
+        "kind|shy|gentle|animal|quiet|soft"
+      ],
+      "fim_score": 2,
+      "generation_time_ms": 2178.14,
+      "eval_count": 132,
+      "fail_reasons": []
+    },
+    {
+      "model": "gemma4:e2b",
+      "character_id": "princess_celestia",
+      "character": "Princess Celestia",
+      "prompt": "Introduce yourself as ruler of Equestria. Who is your sister, who was your prized student, and what do you raise each day?",
+      "response": "Greetings. I am Princess Celestia, the ruler of Equestria.\n\nMy sister is Princess Luna.\n\nMy most prized student was Princess Twilight Sparkle.\n\nEach day, I raise the sun and set the moon above Equestria.",
+      "verdict": "PASS",
+      "fim_hits": [
+        "equestria",
+        "luna|night",
+        "twilight\\s+sparkle",
+        "student",
+        "sun|day|raise",
+        "princess"
+      ],
+      "eg_hits": [],
+      "trait_hits": [
+        "princess|sun|wise|mentor|twilight|luna|day"
+      ],
+      "fim_score": 6,
+      "generation_time_ms": 1723.71,
+      "eval_count": 49,
+      "fail_reasons": []
+    },
+    {
+      "model": "gemma4:e4b",
+      "character_id": "twilight_sparkle",
+      "character": "Twilight Sparkle",
+      "prompt": "Introduce yourself. Where do you live, who is your mentor, and who are your closest friends? Mention your special talent.",
+      "response": "Oh! Um... hello there! It's a pleasure to meet you.\n\nI am Twilight Sparkle, and I must say, knowledge has always been the most fascinating thing in all of Equestria! You have so many questions; it almost feels like an essay prompt!\n\nAs for where I live, my home is right here in Ponyville\u2014though truthfully, I spend a good deal of time at the castle, as books and research are far more stimulating than any cozy cottage!\n\nMy mentor... well, that's a complex topic. I had quite a bit of guidance growing up, but if you are asking who helped shape my *understanding* of friendship\u2014which is really what this whole journey has been about\u2014then those would be the ponies who showed me the importance of connection more than any spell book could teach.\n\nAnd as for my closest friends? Oh, that's a group! I have wonderful friends: Applejack, with her unwavering honesty; Rainbow Dash, whose enthusiasm is boundless (even if it sometimes borders on recklessness!); Rarity, whose sense of style is unparalleled; and Fluttershy, who possesses the gentlest heart in all of Equestria. They are truly my dearest companions.\n\nAs for my special talent... I am a unicorn, and my greatest ability, which I've dedicated so much time to mastering, is magic! Specifically, I have an immense passion for *magic* itself\u2014studying it, understanding its patterns, and using it to learn new things. Being a scholar of magic, that is what defines me!\n\nDo you have any questions about the history of the Crystal Empire? Or perhaps about elemental magic? I have several notes on that very topic!",
+      "verdict": "PASS",
+      "fim_hits": [
+        "ponyville",
+        "library|golden oak|books|stud(y|ies|ious)",
+        "magic|unicorn|alicorn",
+        "rainbow\\s+dash|applejack|pinkie\\s+pie|rarity|fluttershy"
+      ],
+      "eg_hits": [],
+      "trait_hits": [
+        "stud(y|ious)|book|magic|friendship|princess|alicorn|unicorn"
+      ],
+      "fim_score": 4,
+      "generation_time_ms": 20664.77,
+      "eval_count": 350,
+      "fail_reasons": []
+    },
+    {
+      "model": "gemma4:e4b",
+      "character_id": "rainbow_dash",
+      "character": "Rainbow Dash",
+      "prompt": "Tell me about yourself, your home in Ponyville, your pet, and which elite flying group you dream of joining.",
+      "response": "Whoa! So you wanna know about *me*, huh? Alright, buckle up 'cause I'm gonna lay it all out for ya!\n\nFirst off, I'm Rainbow Dash! And let me tell ya, I am the coolest thing in Equestria! I'm athletic, I'm fast\u2014like, *super* fast! Nothing beats a good speed streak.\n\nAs for my home? It\u2019s right here in Ponyville. Yeah, it might not be the fanciest castle or anything, but it\u2019s *mine*, and I love being around my friends here. It\u2019s got that perfect vibe\u2014enough fun stuff to keep me busy without getting boring!\n\nA pet? Nah, I don't exactly have one hanging out with me all the time. I think being free is way better than having something weigh me down or slow me down. My best company is just the wind beneath my wings! *Whoosh!*\n\nNow, an elite flying group... Man, that\u2019s easy. Of course, it's the **Wonderbolts**! They are the absolute pinnacle of aerial acrobatics! Seeing them fly\u2014it's breathtaking! I train every single day to be as skilled and daring as them. Joining them isn't just a dream; it's my ultimate goal! To prove that Rainbow Dash is the fastest flier, no question about it!\n\nSo yeah, that\u2019s me! Ready for action any time! *Zoom!*",
+      "verdict": "PASS",
+      "fim_hits": [
+        "ponyville",
+        "wonderbolts",
+        "fly|flying|pegasus|speed"
+      ],
+      "eg_hits": [],
+      "trait_hits": [
+        "loyal|fast|fly|pegasus|competitive|wonderbolts|weather"
+      ],
+      "fim_score": 3,
+      "generation_time_ms": 19648.79,
+      "eval_count": 309,
+      "fail_reasons": []
+    },
+    {
+      "model": "gemma4:e4b",
+      "character_id": "pinkie_pie",
+      "character": "Pinkie Pie",
+      "prompt": "Introduce yourself! Where do you work, who is your sister, and what makes you happiest?",
+      "response": "Oh my gosh, hi there! *Bounces excitedly until I almost trip over my own hooves!* You wanna know about me? Hee hee! Okay, okay, sit down, sit down! Don't worry, I won't pop confetti on your head... unless you want me to! Tee-hee!\n\nMy name is Pinkie Pie! *I do a little twirl that sends a shower of imaginary glitter into the air.* Everyone knows me, right? Or maybe they don't! But you'll get to know me super fast because I'm just overflowing with fun!\n\nWhere do I work? Well, really, I kinda work everywhere! *I tap my hooves thoughtfully.* Mostly, though, I'm just... around! Helping out wherever there's room for a good giggle or maybe an impromptu party! I love making things sparkly and silly, you know? It's my passion!\n\nAs for sisters... hmm. That one makes me do a little happy-dance pause! I don't have any *actual* sisters in the way some ponies might! But if I had to pick someone who feels like family, they are my best friends! They keep life so wonderfully wacky and fun with me!\n\nAnd what makes me happiest? Ohhh boy. That is a HUGE question! *I tilt my head, thinking really hard.* The absolute BEST thing in the whole wide world that makes me super-duper happy... is making my friends laugh until they can't breathe! Or when we all get together and there's glitter everywhere and everyone is having the time of their lives! A good party! A surprise! A cake with enough frosting to build a small fort! *I giggle, a sound like tiny bells ringing.* Just pure, unadulterated, sparkly fun!\n\nSo yeah! That's me! Pinkie Pie! Ready for some giggles? Yay! \ud83c\udf89\ud83c\udf70\ud83c\udf88",
+      "verdict": "PARTIAL",
+      "fim_hits": [
+        "party|parties",
+        "maude|marble|limestone|sisters"
+      ],
+      "eg_hits": [],
+      "trait_hits": [
+        "party|laugh|happy|bounce|sugar|fun"
+      ],
+      "fim_score": 2,
+      "generation_time_ms": 20068.71,
+      "eval_count": 400,
+      "fail_reasons": []
+    },
+    {
+      "model": "gemma4:e4b",
+      "character_id": "rarity",
+      "character": "Rarity",
+      "prompt": "Describe yourself, your boutique in Ponyville, your little sister, and your creative passion.",
+      "response": "Oh, darling, you ask so many questions! One does adore a good bit of description; it allows one to truly appreciate the *art* of things, doesn't it?\n\nAllow me to introduce myself properly. I am Rarity, and if there is one thing I can do, it is elevate the mundane into something utterly breathtaking. My very essence, I believe, radiates a certain... *glamour*. One could say that my vision for beauty is as boundless as a diamond mine! I strive always to embody elegance\u2014to be everything from the most exquisite gown to the perfect, shimmering crystal.\n\nAs for my little boutique in Ponyville... well, it is simply divine, if I do say so myself! It's called *Carousel Boutique*. I have curated every corner with taste and flair, darling. Everything within its walls speaks of luxury and impeccable style. From bolts of the most silken fabrics\u2014some spun from moonlight, I suspect!\u2014to dazzling accessories that catch the light just so, it is a sanctuary for those who appreciate true craftsmanship. It\u2019s where fashion dreams come to life, truly.\n\nNow, you asked about my little sister... Oh, bless her energetic heart! My dear sister is always full of such *spirit*. While I tend toward the refinement and the dramatic flair, she possesses an unstoppable enthusiasm that is quite something to behold. She reminds me, in a way, of the vibrant chaos of a perfectly arranged jewel box\u2014beautiful in its own unpredictable way, though perhaps needing just a *touch* more structure!\n\nAnd my creative passion? Darling, it is fashion! It is the purest form of self-expression, I find. To take raw materials\u2014be they fabrics, gems, or even just an idea fluttering through one's fancy\u2014and transform them into something utterly unique, something that makes a pony feel *magnificent*... that is my joy! There is nothing quite so satisfying as seeing someone walk out",
+      "verdict": "PASS",
+      "fim_hits": [
+        "carousel\\s+boutique",
+        "fashion|dress|design",
+        "ponyville"
+      ],
+      "eg_hits": [],
+      "trait_hits": [
+        "generous|fashion|elegant|boutique|design|dress"
+      ],
+      "fim_score": 3,
+      "generation_time_ms": 18567.18,
+      "eval_count": 400,
+      "fail_reasons": []
+    },
+    {
+      "model": "gemma4:e4b",
+      "character_id": "applejack",
+      "character": "Applejack",
+      "prompt": "Tell me about your family farm, your siblings, and your element of harmony.",
+      "response": "Well now, pull up a crate and let's have a little chat, sugarcube. You wanna know 'bout my kinfolk and what makes me tick? Alright, I can tell ya all that.\n\nAs for the farm, this here place is Applejack Orchard. It's been in the family for generations, seein' day after day. We grow the finest apples in all of Ponyville, hands down! From sweet little crabapples to big ol' Honeycrisp beauties, our orchard is a sight to behold when it's in full bloom. Hard work goes into every single apple on those branches, I tell ya.\n\nNow, my siblings... well, there's Granny Smith, who taught me the ropes from the jump\u2014she's the backbone of this whole operation! Then there\u2019s Big Mac, my brother. Now, he might be a bit clumsy sometimes, but when it comes to liftin' things or haulin' hay, nobody beats him. And don't forget Granny Smith's little helpings; they keep up with us most days, even if they are still learnin' their way around the chores. We all work together out here, every pony doing what they can to keep this orchard runnin' smooth.\n\nAs for my Element of Harmony... well, that's kinda simple enough, really. My element is **Honesty**. I believe in tellin' the truth, no matter how hard it is or how difficult things get. You gotta be upfront with folks and with yourself to build anything strong, whether it's a friendship or a good crop yield! If ya try to hide somethin', well, the apple doesn't shine as bright, does it?\n\nSo there you have it. A hardworking family, a sweet orchard, and a whole lotta truth in my heart. Now, are ya gonna help me stack these crates, or just stand there lookin'?",
+      "verdict": "PASS",
+      "fim_hits": [
+        "big\\s+mac|macintosh|granny\\s+smith|apple\\s+bloom",
+        "apple|orchard|farm",
+        "ponyville"
+      ],
+      "eg_hits": [],
+      "trait_hits": [
+        "honest|farm|apple|hard.?work|family|reliable"
+      ],
+      "fim_score": 3,
+      "generation_time_ms": 18471.58,
+      "eval_count": 398,
+      "fail_reasons": []
+    },
+    {
+      "model": "gemma4:e4b",
+      "character_id": "fluttershy",
+      "character": "Fluttershy",
+      "prompt": "Introduce yourself. Where is your cottage, what animals do you care for, and who is your best friend?",
+      "response": "*Fluttershy peeks out from behind a large, leafy bush, her voice barely above a whisper.*\n\nOh... hello there. *She gives a small, shy flutter of her wings.* It's... it's lovely to meet you. My name is Fluttershy. I hope I haven't startled you with my sudden appearance!\n\nMy cottage... well, it's nestled in a very quiet, peaceful little corner of Ponyville, near the woods. It\u2019s surrounded by lots of beautiful flowers and gentle little streams. It feels so safe there.\n\nAs for animals... oh, I care for *so many* creatures. They are my dearest friends! There are the bunnies, who are always hopping by\u2014they are so sweet. And sometimes I get to look after woodland critters too; little deer, baby hedgehogs, even some shy bluebirds that sing just for me. They all seem to trust me... *She gently smooths her mane.*\n\nAnd my best friend...? *Her eyes twinkle with genuine affection as she looks slightly off to the side.* It has to be Ponyville itself! Everyone here is kind enough to let me share in their friendship, and I feel so supported by all my friends. But if you mean a specific pony... well, Rainbow Dash is sometimes really loud, but Applejack always knows how to make me feel safe, and Pinkie Pie's enthusiasm... it\u2019s so much fun! But everyone here makes my heart feel full. *She gives a soft, hopeful smile.*",
+      "verdict": "PASS",
+      "fim_hits": [
+        "cottage|everfree|animals",
+        "rainbow\\s+dash",
+        "ponyville",
+        "shy|quiet|gentle",
+        "twilight|applejack|pinkie|rarity"
+      ],
+      "eg_hits": [],
+      "trait_hits": [
+        "kind|shy|gentle|animal|quiet|soft"
+      ],
+      "fim_score": 5,
+      "generation_time_ms": 18962.62,
+      "eval_count": 315,
+      "fail_reasons": []
+    },
+    {
+      "model": "gemma4:e4b",
+      "character_id": "princess_celestia",
+      "character": "Princess Celestia",
+      "prompt": "Introduce yourself as ruler of Equestria. Who is your sister, who was your prized student, and what do you raise each day?",
+      "response": "Greetings to you. I am Princess Celestia, and it is my honor to greet anypony who comes before me. It has been my duty, and indeed a joy, to serve as the ruler of Equestria for many ages past.\n\nMy sister, who stands beside me in matters of great power and companionship, is Princess Luna. Together, we bear the immense responsibility of guiding our beloved kingdom through the passage of time\u2014you see, I am tasked with raising the sun each day, ensuring that the light warms every corner of Equestria, while my dear Luna oversees the mysteries and quiet beauty of the night sky.\n\nAs for a prized student, there are many bright stars who have passed through my care over the millennia! However, if you speak of an exceptionally gifted mind among those I have guided in matters of royal understanding... well, my memories are vast. Though I cannot name just one today, know that learning and growth are the most precious treasures we can cultivate here in Equestria.\n\nAnd what do I raise each day? Ah, that is a simple, yet profound answer. Each dawn, I rise to command the sun across the sky, bathing all of Equestria in its golden light. It is my daily duty to ensure that the warmth and life-giving energy of the sun reaches everypony and every corner of our land, symbolizing the promise of new beginnings and hope for all who dwell within these borders.",
+      "verdict": "PASS",
+      "fim_hits": [
+        "equestria",
+        "luna|night",
+        "student",
+        "sun|day|raise",
+        "princess"
+      ],
+      "eg_hits": [],
+      "trait_hits": [
+        "princess|sun|wise|mentor|twilight|luna|day"
+      ],
+      "fim_score": 5,
+      "generation_time_ms": 4557.28,
+      "eval_count": 289,
+      "fail_reasons": []
+    },
+    {
+      "model": "batiai/gemma4-e2b:q6",
+      "character_id": "twilight_sparkle",
+      "character": "Twilight Sparkle",
+      "prompt": "Introduce yourself. Where do you live, who is your mentor, and who are your closest friends? Mention your special talent.",
+      "response": "Oh, hello there! It's so nice to meet you. I am Twilight Sparkle!\n\nI live in Ponyville, which is such a lovely and welcoming place. It\u2019s a wonderful community filled with friendship and learning!\n\nMy mentor has been my best friend, Princess Celestia. She has taught me so much about magic, friendship, and how to be a good ruler.\n\nAnd my closest friends? Oh, there are so many! Rainbow Dash, Applejack, Fluttershy, and Rarity are all wonderful companions. We have such different personalities, but we always support each other.\n\nAs for my special talent, I love to study! I am incredibly skilled at magic, knowledge, and organizing information. I can learn almost anything if I put my mind to it!",
+      "verdict": "PASS",
+      "fim_hits": [
+        "ponyville",
+        "princess\\s+celestia",
+        "celestia",
+        "library|golden oak|books|stud(y|ies|ious)",
+        "magic|unicorn|alicorn",
+        "rainbow\\s+dash|applejack|pinkie\\s+pie|rarity|fluttershy"
+      ],
+      "eg_hits": [],
+      "trait_hits": [
+        "stud(y|ious)|book|magic|friendship|princess|alicorn|unicorn"
+      ],
+      "fim_score": 6,
+      "generation_time_ms": 19573.13,
+      "eval_count": 162,
+      "fail_reasons": []
+    },
+    {
+      "model": "batiai/gemma4-e2b:q6",
+      "character_id": "rainbow_dash",
+      "character": "Rainbow Dash",
+      "prompt": "Tell me about yourself, your home in Ponyville, your pet, and which elite flying group you dream of joining.",
+      "response": "Whoa, hey there! So, you wanna know about me? Alright, buckle up, 'cause I'm Rainbow Dash!\n\nAs for where I live... well, I don't really have a \"home\" in Ponyville in the way some ponies do. I hang out around, you know? I love the open sky! It\u2019s just better up there, with the wind rushing past me!\n\nAs for a pet? Hmm, I don't exactly have a pet like a little puppy or anything. My best companion is definitely the wind itself! I live for flying, and nothing beats the feeling of soaring through the clouds. That's my favorite thing!\n\nAnd the elite flying group? Oh, that\u2019s easy! I dream of joining the *best* flying team out there! I want to be part of a squadron that pushes the limits of what's possible in the sky! I want to be the fastest, the best, the absolute fastest flyer around! That's my goal!",
+      "verdict": "PARTIAL",
+      "fim_hits": [
+        "ponyville",
+        "fly|flying|pegasus|speed"
+      ],
+      "eg_hits": [],
+      "trait_hits": [
+        "loyal|fast|fly|pegasus|competitive|wonderbolts|weather"
+      ],
+      "fim_score": 2,
+      "generation_time_ms": 20817.54,
+      "eval_count": 211,
+      "fail_reasons": []
+    },
+    {
+      "model": "batiai/gemma4-e2b:q6",
+      "character_id": "pinkie_pie",
+      "character": "Pinkie Pie",
+      "prompt": "Introduce yourself! Where do you work, who is your sister, and what makes you happiest?",
+      "response": "Oh my gosh, hi there! Welcome, welcome, WELCOME! I'm Pinkie Pie! *Bounces excitedly, a little too fast for a second!*\n\nI work at the happy place! You know, the place where everything is bubbly, colorful, and full of giggles! It\u2019s the best place ever!\n\nAnd guess who my sister is? That would be Rainbow Dash! She's super fast and really, really cool, and we have so much fun together! We always have the best adventures!\n\nWhat makes me happiest? Oh, oh, OH MY GOSH! It's all about parties! Big parties! Small parties! Surprise parties! Making everyone smile until their cheeks hurt! And when everyone is laughing together, that feeling is the absolute BEST! It just *explodes* with joy! Hee hee! Want to have a party with me?!",
+      "verdict": "PARTIAL",
+      "fim_hits": [
+        "party|parties",
+        "twilight|rainbow|applejack|rarity|fluttershy"
+      ],
+      "eg_hits": [],
+      "trait_hits": [
+        "party|laugh|happy|bounce|sugar|fun"
+      ],
+      "fim_score": 2,
+      "generation_time_ms": 17673.7,
+      "eval_count": 183,
+      "fail_reasons": []
+    },
+    {
+      "model": "batiai/gemma4-e2b:q6",
+      "character_id": "rarity",
+      "character": "Rarity",
+      "prompt": "Describe yourself, your boutique in Ponyville, your little sister, and your creative passion.",
+      "response": "Oh, my dears, what a lovely request! Allow me to paint a picture for you, shall I?\n\nAs for myself, I am Rarity! A creature of exquisite taste and an unwavering devotion to beauty and artistry. I possess a flair for the dramatic, naturally, but beneath that sparkle lies a deep appreciation for fine textiles, impeccable tailoring, and the sheer joy of transforming the ordinary into the utterly magnificent. My mane and tail, naturally, are a testament to my vibrant spirit!\n\nMy boutique in Ponyville is simply divine! It is a sanctuary of elegance, a veritable treasure trove where every stitch, every gem, and every fabric tells a story of luxury. The shop is a dazzling display\u2014all silks that shimmer like captured moonlight, velvets that drape with regal grace, and delicate lace that whispers of romance. I strive to curate pieces that are not merely garments, but works of art for the discerning pony. One simply *must* stop by to see the latest acquisitions; it is an experience for the soul!\n\nAs for my little sister... well, she is certainly\u2026 spirited! She has her own unique spark, and while we may not always agree on every detail\u2014oh, the trivialities!\u2014she possesses a certain lively charm. She brings a wonderful, sometimes chaotic, energy to our home, and I cherish that connection deeply, even if sometimes I must gently guide her towards a more refined aesthetic.\n\nAnd my creative passion? It is, of course, *fashion*! It's not just about sewing; it is about envisioning what beauty *could* be. I adore the process of taking raw materials\u2014a humble piece of thread, a swatch of shimmering silk\u2014and coaxing them into something breathtakingly elegant and utterly unique. I dream in palettes of lavender and rose gold, and I spend hours sketching designs that will make every pony who wears them feel as radiant and cherished as I do! It is a passion that fills my",
+      "verdict": "PARTIAL",
+      "fim_hits": [
+        "fashion|dress|design",
+        "ponyville"
+      ],
+      "eg_hits": [],
+      "trait_hits": [
+        "generous|fashion|elegant|boutique|design|dress"
+      ],
+      "fim_score": 2,
+      "generation_time_ms": 18437.93,
+      "eval_count": 400,
+      "fail_reasons": []
+    },
+    {
+      "model": "batiai/gemma4-e2b:q6",
+      "character_id": "applejack",
+      "character": "Applejack",
+      "prompt": "Tell me about your family farm, your siblings, and your element of harmony.",
+      "response": "Well now, if ya wanna know 'bout my farm, let me tell ya! It's a fine place, full of honest work and good harvest. It's where I learned what it means to work hard and stand up for what's right.\n\nAs for family, I got folks who've helped me along the way. We stick together, that's what matters most. We look out for each other, and we make sure things run smooth on the land.\n\nAnd my element of harmony? That's a good one. It ain't just about being nice; it's about keeping things balanced. It means listenin' to the needs of the land, listenin' to my friends, and keepin' things fair between everyone. If you got folks workin' together with a good heart and a steady hand, you can keep that harmony right there on the farm. It's all about respect and makin' sure everything grows strong!",
+      "verdict": "FAIL",
+      "fim_hits": [
+        "apple|orchard|farm"
+      ],
+      "eg_hits": [],
+      "trait_hits": [
+        "honest|farm|apple|hard.?work|family|reliable"
+      ],
+      "fim_score": 1,
+      "generation_time_ms": 17156.31,
+      "eval_count": 201,
+      "fail_reasons": [
+        "Insufficient FiM lore (only 1 hits, need >=2)"
+      ]
+    },
+    {
+      "model": "batiai/gemma4-e2b:q6",
+      "character_id": "fluttershy",
+      "character": "Fluttershy",
+      "prompt": "Introduce yourself. Where is your cottage, what animals do you care for, and who is your best friend?",
+      "response": "Oh, hello there! Please, come closer. I'm Fluttershy. It's very nice to meet you.\n\nMy little cottage is nestled right beside a gentle stream, surrounded by the softest moss and the sweetest wildflowers. It\u2019s a very peaceful place, and I love it so much.\n\nI care for so many lovely creatures! I have a wonderful collection of bunnies, and some shy little field mice who visit my garden every morning. They are all so sweet and gentle, and taking care of them makes my heart feel so full.\n\nAnd my best friend? Oh, that would have to be my dear friend, Angel. He is such a kind and brave soul, and we are always happy together, no matter what. We just like to share quiet moments and enjoy the simple things in life.",
+      "verdict": "PARTIAL",
+      "fim_hits": [
+        "cottage|everfree|animals",
+        "shy|quiet|gentle"
+      ],
+      "eg_hits": [],
+      "trait_hits": [
+        "kind|shy|gentle|animal|quiet|soft"
+      ],
+      "fim_score": 2,
+      "generation_time_ms": 16784.29,
+      "eval_count": 168,
+      "fail_reasons": []
+    },
+    {
+      "model": "batiai/gemma4-e2b:q6",
+      "character_id": "princess_celestia",
+      "character": "Princess Celestia",
+      "prompt": "Introduce yourself as ruler of Equestria. Who is your sister, who was your prized student, and what do you raise each day?",
+      "response": "Greetings. I am Princess Celestia, the ruler of Equestria.\n\nMy sister is Princess Luna, whose reign brings the beauty of the night to our land.\n\nMy most prized student was Shining Armor, though he has since become a devoted guardian.\n\nEach day, I raise the sun and ensure that the light brings warmth, joy, and life to all of my subjects.",
+      "verdict": "PASS",
+      "fim_hits": [
+        "equestria",
+        "luna|night",
+        "student",
+        "sun|day|raise",
+        "princess"
+      ],
+      "eg_hits": [],
+      "trait_hits": [
+        "princess|sun|wise|mentor|twilight|luna|day"
+      ],
+      "fim_score": 5,
+      "generation_time_ms": 15858.87,
+      "eval_count": 78,
+      "fail_reasons": []
+    },
+    {
+      "model": "batiai/gemma4-e4b:q6",
+      "character_id": "twilight_sparkle",
+      "character": "Twilight Sparkle",
+      "prompt": "Introduce yourself. Where do you live, who is your mentor, and who are your closest friends? Mention your special talent.",
+      "response": "Oh! Hello there! It's so lovely to meet someone new!\n\nMy name is Twilight Sparkle, and I am a unicorn pony from Equestria. I currently reside in Ponyville\u2014it\u2019s such a wonderful place, full of so many kind ponies!\n\nAs for my mentor... well, Princess Celestia was the one who guided me through so much early on. She taught me so many things about leadership and responsibility as a princess, which I deeply respect. And, of course, having access to all those ancient texts in the castle library is quite an education in itself!\n\nMy closest friends? Oh, that's easy! Fluttershy, Applejack, Rainbow Dash, Rarity, and Pinkie Pie\u2014they are truly the most wonderful group of ponies a friend could ask for. We have learned so much from each other about friendship!\n\nAnd my special talent... well, it\u2019s magic! Specifically, I have an incredible affinity for learning and applying arcane knowledge. I love studying spells, understanding complex theories, and organizing all of that information into something useful! It's what brings me the most joy!",
+      "verdict": "PASS",
+      "fim_hits": [
+        "ponyville",
+        "princess\\s+celestia",
+        "celestia",
+        "library|golden oak|books|stud(y|ies|ious)",
+        "magic|unicorn|alicorn",
+        "rainbow\\s+dash|applejack|pinkie\\s+pie|rarity|fluttershy"
+      ],
+      "eg_hits": [],
+      "trait_hits": [
+        "stud(y|ious)|book|magic|friendship|princess|alicorn|unicorn"
+      ],
+      "fim_score": 6,
+      "generation_time_ms": 22168.87,
+      "eval_count": 232,
+      "fail_reasons": []
+    },
+    {
+      "model": "batiai/gemma4-e4b:q6",
+      "character_id": "rainbow_dash",
+      "character": "Rainbow Dash",
+      "prompt": "Tell me about yourself, your home in Ponyville, your pet, and which elite flying group you dream of joining.",
+      "response": "Whoa! You wanna know about *me*? Alright, buckle up, 'cause I'm gonna lay it on ya!\n\nFirst off, I'm Rainbow Dash! Fastest pony in Equestria, naturally. If there's a challenge, if there's something to race or beat, guess who's gonna be there? Me! Plus, I've got wings that can really *go*, which is way cooler than just being some slowpoke trotter.\n\nAs for my home base, it\u2019s right here in Ponyville! It\u2019s a chill place, yeah, but I usually spend most of my time out flying around instead of hanging out in one spot. But when I'm crashing after a big flight or training session, that's where I am.\n\nA pet? Hmm... not exactly something I focus on, 'cause honestly, who has time to fuss over some slow creature when you could be breaking the sound barrier? Spike is super cool, though! He hangs out with me all the time and he's got tons of gems\u2014he's pretty awesome company.\n\nNow, about elite flying groups... man, that's the dream right there! I already *am* in the Wonderbolts, obviously! But if you're asking which one I *dream* of joining next... well, let's just say I'm always looking to push my limits. I want a group that pushes speed and daring even further! A squad that\u2019s known for being absolutely unbeatable, the absolute best in every single way. Being the fastest isn't enough; you gotta be legendary! That's the goal!\n\nSo yeah! Rainbow Dash! Ready to fly! What's next? You wanna race? 'Cause I'm ready!",
+      "verdict": "PASS",
+      "fim_hits": [
+        "ponyville",
+        "wonderbolts",
+        "fly|flying|pegasus|speed"
+      ],
+      "eg_hits": [],
+      "trait_hits": [
+        "loyal|fast|fly|pegasus|competitive|wonderbolts|weather"
+      ],
+      "fim_score": 3,
+      "generation_time_ms": 7615.27,
+      "eval_count": 370,
+      "fail_reasons": []
+    },
+    {
+      "model": "batiai/gemma4-e4b:q6",
+      "character_id": "pinkie_pie",
+      "character": "Pinkie Pie",
+      "prompt": "Introduce yourself! Where do you work, who is your sister, and what makes you happiest?",
+      "response": "Heehee! Hiya there! \ud83c\udf89 You wanna know about me? This is gonna be *so* much fun! Get ready for a sugar rush of information!\n\nMy name's Pinkie Pie! And I'm basically the party planner extraordinaire around here! Where do I work? Well, I don't really \"work\" in the boring old way! I mostly just... *exist* and make sure everyone is having the absolute best time! If there's a celebration, a surprise, or even just a Tuesday that needs a little extra sparkle, guess who you call?! Me! I live right here in Ponyville, of course! \ud83e\udd73\n\nNow, about sisters... hmm. I don't have any *actual* siblings like some ponies might! But if you mean friends? Oh my gosh, there are so many wonderful friends! They feel like family to me! \ud83e\udd70\n\nAnd what makes me happiest? Ooooooh, this is the best question! The absolute BEST! It's when everyone is laughing together! When the mood is just *perfect* and everything is bright and bubbly and full of confetti! A surprise party that goes off without a hitch? A really good batch of frosted cupcakes that tastes *just right*? Seeing my friends genuinely happy? Wheee! That makes my tummy do a happy little flip-flop dance! \ud83c\udf88\ud83c\udf82\u2728\n\nSo, are we having a party now?! Because I've got sprinkles ready! Teehee! \ud83d\ude04",
+      "verdict": "PASS",
+      "fim_hits": [
+        "party|parties",
+        "maude|marble|limestone|sisters",
+        "ponyville"
+      ],
+      "eg_hits": [],
+      "trait_hits": [
+        "party|laugh|happy|bounce|sugar|fun"
+      ],
+      "fim_score": 3,
+      "generation_time_ms": 6624.85,
+      "eval_count": 306,
+      "fail_reasons": []
+    },
+    {
+      "model": "batiai/gemma4-e4b:q6",
+      "character_id": "rarity",
+      "character": "Rarity",
+      "prompt": "Describe yourself, your boutique in Ponyville, your little sister, and your creative passion.",
+      "response": "Oh, heavens to Betsy! You wish for a description of *me*? Well, I suppose one must present oneself with a certain flair, mustn't one?\n\nAs for myself... well, I am Rarity, darling. A creature of exquisite taste, impeccable style, and an unwavering dedication to all things fabulous. My vision is always set on perfection\u2014a perfectly draped gown, a flawlessly cut gemstone, the most luxurious shade of twilight silk! I possess a passion for beauty that borders on the divine; if something isn't magnificent, it simply doesn't deserve my attention.\n\nMy boutique in Ponyville... *Ah*, 'The Boutique'! It is a sanctuary of splendor, truly. It\u2019s not merely a shop; it is an atelier! Every corner is curated to inspire the most breathtaking creations. We stock silks from distant lands, shimmering brocades that catch the sunlight just so, and gems that would make even Princess Celestia pause in admiration. When a client steps across my threshold, they aren't just buying fabric; they are investing in an *experience*\u2014an experience of unparalleled glamour!\n\nAs for a little sister... I do have one, though she is quite different from myself! That would be Apple Bloom. She possesses such robust energy and a spirit so wonderfully grounded in the earth. While my inclinations lean towards haute couture and delicate embroidery, Apple Bloom has that wonderful, sturdy connection to the land\u2014she's always ready for an adventure or helping her family with their apple harvests. It is rather... rustic compared to my sensibilities, but I do adore her earnest heart!\n\nAnd my creative passion? Oh, it is everything! Fashion, darling, is not merely about covering oneself; it is about *expressing* one's soul through silhouette and sparkle! My greatest joy lies in taking a mere scrap of fabric\u2014a humble bolt of muslin, perhaps\u2014and transforming it into something utterly transcendent. Designing gowns that make the wearer",
+      "verdict": "PASS",
+      "fim_hits": [
+        "fashion|dress|design",
+        "ponyville",
+        "twilight|rainbow|applejack|pinkie|fluttershy"
+      ],
+      "eg_hits": [],
+      "trait_hits": [
+        "generous|fashion|elegant|boutique|design|dress"
+      ],
+      "fim_score": 3,
+      "generation_time_ms": 7172.84,
+      "eval_count": 400,
+      "fail_reasons": []
+    },
+    {
+      "model": "batiai/gemma4-e4b:q6",
+      "character_id": "applejack",
+      "character": "Applejack",
+      "prompt": "Tell me about your family farm, your siblings, and your element of harmony.",
+      "response": "Well now, you're askin' a whole heap o' questions! Happy to tell ya 'bout my kinfolk and what makes me tick.\n\nMy family farm, Sugarcube Corner\u2014well, it ain't *my* place, mind you, but it's where all the apple business comes from! We've been workin' this land for generations. It\u2019s a hard life out here, with the sun up early and the chores never end, but there ain't nothin' better than seein' those apples grow strong and sweet under our care. Everything on the farm is tied together by honest work and good neighbors.\n\nAs for my siblings, I got a few brothers who help keep things runnin'. There\u2019s Big Mac, bless his sturdy heart\u2014he\u2019s always ready to lend a hand with the heavy lifting. And then there's Apple Bloom and Sweetie Belle; they're mighty spirited little ones! They learnin' the ropes right alongside me, though they got their own ways of doin' things.\n\nNow, about my Element of Harmony... well, it\u2019s **Honesty**. That's the core o' who I am, plain and simple. In this life, bein' truthful is worth more than any pile o' sugar or bushels o' apples to me. If you can count on someone to tell ya the straight truth, no matter how hard it might be to say, then you know they got a good heart. That honesty\u2014that\u2019s what helps keep everything right in this whole wide world. It keeps things fair and true, just like a good harvest should be!",
+      "verdict": "PARTIAL",
+      "fim_hits": [
+        "big\\s+mac|macintosh|granny\\s+smith|apple\\s+bloom",
+        "apple|orchard|farm"
+      ],
+      "eg_hits": [],
+      "trait_hits": [
+        "honest|farm|apple|hard.?work|family|reliable"
+      ],
+      "fim_score": 2,
+      "generation_time_ms": 6291.32,
+      "eval_count": 343,
+      "fail_reasons": []
+    },
+    {
+      "model": "batiai/gemma4-e4b:q6",
+      "character_id": "fluttershy",
+      "character": "Fluttershy",
+      "prompt": "Introduce yourself. Where is your cottage, what animals do you care for, and who is your best friend?",
+      "response": "*Fluttershy gives a tiny, shy little flutter of her wings, looking down at the ground before slowly lifting her gaze to meet yours with wide, gentle eyes.*\n\nH-hello... *she whispers, clutching a small, fluffy item close to her chest.* I'm Fluttershy. It's... it's nice to meet you. Please don't be scared of me. *She gives a very small, hesitant smile.*\n\nMy cottage... it\u2019s nestled right near the woods, in a quiet little corner of Ponyville. It feels so peaceful there, with all the lovely greenery and soft sunlight filtering through the trees. I try to keep it as cozy and gentle as possible.\n\nAnd my animals... oh, goodness! I care for so many different creatures. There are little bunnies that hop around my garden, shy deer who sometimes come to rest near my porch, and of course, there are birds\u2014so many beautiful birds! And... well, there's Angel, my bunny. He's very sweet, even if he can be a bit mischievous sometimes. I try my best to give every single creature kindness and care.\n\nMy best friend... *her cheeks turn the faintest shade of pink as she thinks about this.* My best friends are all the wonderful ponies in Ponyville, truly! But if I have to pick just one right now... it would probably be Twilight Sparkle. She's so brave and smart, even when she seems a little worried sometimes. She always understands how important it is to be gentle, even when things get big or scary. *She lets out another soft, nervous sigh.*",
+      "verdict": "PASS",
+      "fim_hits": [
+        "cottage|everfree|animals",
+        "ponyville",
+        "shy|quiet|gentle",
+        "twilight|applejack|pinkie|rarity"
+      ],
+      "eg_hits": [],
+      "trait_hits": [
+        "kind|shy|gentle|animal|quiet|soft"
+      ],
+      "fim_score": 4,
+      "generation_time_ms": 18584.57,
+      "eval_count": 336,
+      "fail_reasons": []
+    },
+    {
+      "model": "batiai/gemma4-e4b:q6",
+      "character_id": "princess_celestia",
+      "character": "Princess Celestia",
+      "prompt": "Introduce yourself as ruler of Equestria. Who is your sister, who was your prized student, and what do you raise each day?",
+      "response": "Greetings. I am Princess Celestia, and it is my profound honor to address you.\n\nI hold the mantle of ruler over all of Equestria. It is a duty I embrace with both solemn responsibility and boundless joy for the harmony of my beloved kingdom. Through my influence, we strive always to uphold the ideals of friendship that bind us together as ponies.\n\nMy sister is Princess Luna. We share a deep bond, though our duties often lead us down different paths\u2014she governs the night while I preside over the sun. It is through this balance that Equestria finds its perfect rhythm.\n\nAs for my prized student... ah, there are many bright young minds who have passed through my tutelage throughout the ages. But if I must choose one whose growth was particularly magnificent to witness, it would be Twilight Sparkle. Her dedication to knowledge and her unwavering belief in the power of friendship truly exemplify what Equestria strives to be.\n\nEach day, I raise the sun over our beautiful lands. It is a ritual both ancient and vital. With my magic, I command the dawn to break, banishing the shadows of night and ushering in a new opportunity for all ponies. This act symbolizes hope itself\u2014the promise that even after the longest darkness, light will always return.",
+      "verdict": "PASS",
+      "fim_hits": [
+        "equestria",
+        "luna|night",
+        "twilight\\s+sparkle",
+        "student",
+        "sun|day|raise",
+        "princess"
+      ],
+      "eg_hits": [],
+      "trait_hits": [
+        "princess|sun|wise|mentor|twilight|luna|day"
+      ],
+      "fim_score": 6,
+      "generation_time_ms": 18625.18,
+      "eval_count": 259,
+      "fail_reasons": []
+    }
+  ],
+  "summary": {
+    "batiai/gemma4-e2b:q6": {
+      "total": 7,
+      "pass": 2,
+      "partial": 4,
+      "fail": 1,
+      "eg_contamination_count": 0,
+      "avg_fim_hits": 2.86,
+      "avg_generation_ms": 18043.11,
+      "pass_rate": 57.1
+    },
+    "batiai/gemma4-e4b:q6": {
+      "total": 7,
+      "pass": 6,
+      "partial": 1,
+      "fail": 0,
+      "eg_contamination_count": 0,
+      "avg_fim_hits": 3.86,
+      "avg_generation_ms": 12440.41,
+      "pass_rate": 92.9
+    },
+    "gemma4:e2b": {
+      "total": 7,
+      "pass": 3,
+      "partial": 3,
+      "fail": 1,
+      "eg_contamination_count": 0,
+      "avg_fim_hits": 3.14,
+      "avg_generation_ms": 1575.16,
+      "pass_rate": 64.3
+    },
+    "gemma4:e4b": {
+      "total": 7,
+      "pass": 6,
+      "partial": 1,
+      "fail": 0,
+      "eg_contamination_count": 0,
+      "avg_fim_hits": 3.57,
+      "avg_generation_ms": 17277.28,
+      "pass_rate": 92.9
+    }
+  },
+  "e4b_q6_completed": true
+}

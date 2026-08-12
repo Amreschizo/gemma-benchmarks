@@ -1,0 +1,240 @@
+/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/huggingface_hub/constants.py:310: FutureWarning: The `HF_HUB_ENABLE_HF_TRANSFER` environment variable is deprecated as 'hf_transfer' is not used anymore. Please use `HF_XET_HIGH_PERFORMANCE` instead to enable high performance transfer with Xet. Visit https://huggingface.co/docs/huggingface_hub/package_reference/environment_variables#hfxethighperformance for more details.
+  warnings.warn(
+(APIServer pid=43083) INFO 08-10 21:31:29 [api_utils.py:345] 
+(APIServer pid=43083) INFO 08-10 21:31:29 [api_utils.py:345]        █     █     █▄   ▄█
+(APIServer pid=43083) INFO 08-10 21:31:29 [api_utils.py:345]  ▄▄ ▄█ █     █     █ ▀▄▀ █  version 0.27.0
+(APIServer pid=43083) INFO 08-10 21:31:29 [api_utils.py:345]   █▄█▀ █     █     █     █  model   google/gemma-4-E4B-it
+(APIServer pid=43083) INFO 08-10 21:31:29 [api_utils.py:345]    ▀▀  ▀▀▀▀▀ ▀▀▀▀▀ ▀     ▀
+(APIServer pid=43083) INFO 08-10 21:31:29 [api_utils.py:345] 
+(APIServer pid=43083) INFO 08-10 21:31:29 [api_utils.py:273] non-default args: {'model_tag': 'google/gemma-4-E4B-it', 'model': 'google/gemma-4-E4B-it', 'max_model_len': 8192, 'gpu_memory_utilization': 0.9, 'enable_prefix_caching': True}
+(APIServer pid=43083) [transformers] Reading global config value for per-layer attribute `head_dim` on a heterogeneous config. Only do this if the caller can safely handle heterogeneous configs; code that assumes a homogeneous model may use the global value incorrectly.
+(APIServer pid=43083) INFO 08-10 21:31:37 [model.py:645] Resolved architecture: Gemma4ForConditionalGeneration
+(APIServer pid=43083) INFO 08-10 21:31:37 [model.py:1883] Using max model len 8192
+(APIServer pid=43083) INFO 08-10 21:31:40 [kernel.py:306] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/huggingface_hub/constants.py:310: FutureWarning: The `HF_HUB_ENABLE_HF_TRANSFER` environment variable is deprecated as 'hf_transfer' is not used anymore. Please use `HF_XET_HIGH_PERFORMANCE` instead to enable high performance transfer with Xet. Visit https://huggingface.co/docs/huggingface_hub/package_reference/environment_variables#hfxethighperformance for more details.
+  warnings.warn(
+(EngineCore pid=43207) INFO 08-10 21:32:18 [core.py:121] Initializing a V1 LLM engine (v0.27.0) with config: model='google/gemma-4-E4B-it', speculative_config=None, tokenizer='google/gemma-4-E4B-it', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=8192, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, data_parallel_size=1, decode_context_parallel_size=1, dcp_comm_backend=ag_rs, disable_custom_all_reduce=False, quantization=None, quantization_config=None, enforce_eager=False, enable_return_routed_experts=False, kv_cache_dtype=auto, device_config=cuda, structured_outputs_config=StructuredOutputsConfig(backend='auto', disable_any_whitespace=False, disable_additional_properties=False, reasoning_parser='', reasoning_parser_plugin='', enable_in_reasoning=False), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None, kv_cache_metrics=False, kv_cache_metrics_sample=0.01, cudagraph_metrics=False, enable_layerwise_nvtx_tracing=False, enable_mfu_metrics=False, enable_mm_processor_stats=False, enable_logging_iteration_details=False, jit_monitor_mode='warn', jit_monitor_verbose=False), seed=0, served_model_name=google/gemma-4-E4B-it, enable_prefix_caching=True, enable_chunked_prefill=True, pooler_config=None, compilation_config={'mode': <CompilationMode.VLLM_COMPILE: 3>, 'debug_dump_path': None, 'cache_dir': '', 'compile_cache_save_format': 'binary', 'backend': 'inductor', 'custom_ops': ['none'], 'ir_enable_torch_wrap': True, 'splitting_ops': ['vllm::unified_attention_with_output', 'vllm::unified_mla_attention_with_output', 'vllm::mamba_mixer2', 'vllm::mamba_mixer', 'vllm::short_conv', 'vllm::linear_attention', 'vllm::qwen_gdn_attention_core', 'vllm::gdn_attention_core_xpu', 'vllm::olmo_hybrid_gdn_full_forward', 'vllm::sparse_attn_indexer', 'vllm::rocm_aiter_sparse_attn_indexer', 'vllm::deepseek_v4_attention', 'vllm::hpc_rope_norm_forward', 'vllm::unified_kv_cache_update', 'vllm::unified_mla_kv_cache_update'], 'compile_mm_encoder': False, 'cudagraph_mm_encoder': False, 'encoder_cudagraph_token_budgets': [], 'encoder_cudagraph_max_vision_items_per_batch': 0, 'encoder_cudagraph_max_frames_per_batch': None, 'compile_sizes': [], 'compile_ranges_endpoints': [2048], 'inductor_compile_config': {'enable_auto_functionalized_v2': False, 'combo_kernels': True, 'benchmark_combo_kernel': True}, 'inductor_passes': {}, 'cudagraph_mode': <CUDAGraphMode.FULL_AND_PIECEWISE: (2, 1)>, 'cudagraph_num_of_warmups': 1, 'cudagraph_capture_sizes': [1, 2, 4, 8, 16, 24, 32, 40, 48, 56, 64, 72, 80, 88, 96, 104, 112, 120, 128, 136, 144, 152, 160, 168, 176, 184, 192, 200, 208, 216, 224, 232, 240, 248, 256, 272, 288, 304, 320, 336, 352, 368, 384, 400, 416, 432, 448, 464, 480, 496, 512], 'cudagraph_copy_inputs': False, 'cudagraph_specialize_lora': True, 'use_inductor_graph_partition': False, 'pass_config': {'fuse_norm_quant': False, 'fuse_act_quant': False, 'fuse_attn_quant': False, 'enable_sp': False, 'fuse_gemm_comms': False, 'fuse_allreduce_rms': False, 'enable_qk_norm_rope_fusion': False, 'fuse_rope_kvcache_cat_mla': False, 'fuse_act_padding': False, 'fuse_qk_norm_rope_kvcache': False}, 'max_cudagraph_capture_size': 512, 'dynamic_shapes_config': {'type': <DynamicShapesType.BACKED: 'backed'>, 'evaluate_guards': False, 'assume_32_bit_indexing': False}, 'local_cache_dir': None, 'fast_moe_cold_start': False, 'static_all_moe_layers': []}, kernel_config=KernelConfig(ir_op_priority=IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native']), enable_flashinfer_autotune=True, enable_cutedsl_warmup=True, enable_jit_warmup=True, enable_bf16x3_router_gemm=False, moe_backend='auto', linear_backend='auto')
+(EngineCore pid=43207) INFO 08-10 21:32:22 [parallel_state.py:1640] world_size=1 rank=0 local_rank=0 distributed_init_method=tcp://192.168.6.110:33917 backend=nccl
+(EngineCore pid=43207) INFO 08-10 21:32:22 [parallel_state.py:1977] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+(EngineCore pid=43207) INFO 08-10 21:32:22 [gpu_worker.py:385] Using V2 Model Runner
+(EngineCore pid=43207) INFO 08-10 21:32:22 [model_runner.py:308] Loading model from scratch...
+(EngineCore pid=43207) [transformers] Reading global config value for per-layer attribute `head_dim` on a heterogeneous config. Only do this if the caller can safely handle heterogeneous configs; code that assumes a homogeneous model may use the global value incorrectly.
+(EngineCore pid=43207) INFO 08-10 21:32:23 [kernel.py:306] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+(EngineCore pid=43207) INFO 08-10 21:32:23 [cuda.py:482] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+(EngineCore pid=43207) INFO 08-10 21:32:23 [flash_attn.py:789] Using FlashAttention version 2
+(EngineCore pid=43207) INFO 08-10 21:34:37 [weight_utils.py:530] Time spent downloading weights for google/gemma-4-E4B-it: 132.888855 seconds
+(EngineCore pid=43207) INFO 08-10 21:34:37 [weight_utils.py:867] Filesystem type for checkpoints: EXT4. Checkpoint size: 14.89 GiB. Available RAM: 115.54 GiB.
+(EngineCore pid=43207) INFO 08-10 21:34:37 [weight_utils.py:890] Auto-prefetch is disabled because the filesystem (EXT4) is not a recognized network FS (NFS/Lustre). If you want to force prefetching, start vLLM with --safetensors-load-strategy=prefetch.
+(EngineCore pid=43207) Loading safetensors checkpoint shards:   0% Completed | 0/1 [00:00<?, ?it/s]
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349] EngineCore failed to start.
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349] Traceback (most recent call last):
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/v1/engine/core.py", line 1318, in run_engine_core
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]     engine_core = EngineCoreProc(*args, engine_index=dp_rank, **kwargs)
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/tracing/otel.py", line 178, in sync_wrapper
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]     return func(*args, **kwargs)
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]            ^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/v1/engine/core.py", line 1074, in __init__
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]     super().__init__(
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/v1/engine/core.py", line 132, in __init__
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]     self.model_executor = executor_class(vllm_config)
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/tracing/otel.py", line 178, in sync_wrapper
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]     return func(*args, **kwargs)
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]            ^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/v1/executor/abstract.py", line 109, in __init__
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]     self._init_executor()
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/v1/executor/uniproc_executor.py", line 68, in _init_executor
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]     self.driver_worker.load_model()
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/v1/worker/gpu_worker.py", line 442, in load_model
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]     self.model_runner.load_model(load_dummy_weights=load_dummy_weights)
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/v1/worker/gpu/model_runner.py", line 310, in load_model
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]     self.model = model_loader.load_model(
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]                  ^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/tracing/otel.py", line 178, in sync_wrapper
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]     return func(*args, **kwargs)
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]            ^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/model_executor/model_loader/base_loader.py", line 64, in load_model
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]     self.load_weights(model, model_config)
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/tracing/otel.py", line 178, in sync_wrapper
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]     return func(*args, **kwargs)
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]            ^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/model_executor/model_loader/default_loader.py", line 427, in load_weights
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]     loaded_weights = model.load_weights(self.get_all_weights(model_config, model))
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/model_executor/models/gemma4_mm.py", line 2110, in load_weights
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]     return loader.load_weights(weights, mapper=self.hf_to_vllm_mapper)
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/model_executor/model_loader/reload/torchao_decorator.py", line 50, in patched_model_load_weights
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]     return original_load_weights(self, weights, *args, **kwargs)
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/model_executor/models/utils.py", line 424, in load_weights
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]     autoloaded_weights = set(self._load_module("", self.module, weights))
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/model_executor/models/utils.py", line 358, in _load_module
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]     yield from self._load_module(
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/model_executor/models/utils.py", line 331, in _load_module
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]     loaded_params = module_load_weights(weights)
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/model_executor/models/gemma4.py", line 1728, in load_weights
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]     return loader.load_weights(_weight_iterator())
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/model_executor/model_loader/reload/torchao_decorator.py", line 50, in patched_model_load_weights
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]     return original_load_weights(self, weights, *args, **kwargs)
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/model_executor/models/utils.py", line 424, in load_weights
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]     autoloaded_weights = set(self._load_module("", self.module, weights))
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/model_executor/models/utils.py", line 358, in _load_module
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]     yield from self._load_module(
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/model_executor/models/utils.py", line 331, in _load_module
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]     loaded_params = module_load_weights(weights)
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/model_executor/models/gemma4.py", line 1508, in load_weights
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]     weight_loader(param, loaded_weight)
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/model_executor/model_loader/weight_utils.py", line 1240, in default_weight_loader
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]     assert param.size() == loaded_weight.size(), (
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=43207) ERROR 08-10 21:34:39 [core.py:1349] AssertionError: Attempted to load weight (torch.Size([512])) into parameter (torch.Size([256]))
+(EngineCore pid=43207) Process EngineCore:
+(EngineCore pid=43207) Traceback (most recent call last):
+(EngineCore pid=43207)   File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+(EngineCore pid=43207)     self.run()
+(EngineCore pid=43207)   File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+(EngineCore pid=43207)     self._target(*self._args, **self._kwargs)
+(EngineCore pid=43207)   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/v1/engine/core.py", line 1353, in run_engine_core
+(EngineCore pid=43207)     raise e
+(EngineCore pid=43207)   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/v1/engine/core.py", line 1318, in run_engine_core
+(EngineCore pid=43207)     engine_core = EngineCoreProc(*args, engine_index=dp_rank, **kwargs)
+(EngineCore pid=43207)                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=43207)   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/tracing/otel.py", line 178, in sync_wrapper
+(EngineCore pid=43207)     return func(*args, **kwargs)
+(EngineCore pid=43207)            ^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=43207)   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/v1/engine/core.py", line 1074, in __init__
+(EngineCore pid=43207)     super().__init__(
+(EngineCore pid=43207)   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/v1/engine/core.py", line 132, in __init__
+(EngineCore pid=43207)     self.model_executor = executor_class(vllm_config)
+(EngineCore pid=43207)                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=43207)   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/tracing/otel.py", line 178, in sync_wrapper
+(EngineCore pid=43207)     return func(*args, **kwargs)
+(EngineCore pid=43207)            ^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=43207)   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/v1/executor/abstract.py", line 109, in __init__
+(EngineCore pid=43207)     self._init_executor()
+(EngineCore pid=43207)   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/v1/executor/uniproc_executor.py", line 68, in _init_executor
+(EngineCore pid=43207)     self.driver_worker.load_model()
+(EngineCore pid=43207)   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/v1/worker/gpu_worker.py", line 442, in load_model
+(EngineCore pid=43207)     self.model_runner.load_model(load_dummy_weights=load_dummy_weights)
+(EngineCore pid=43207)   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/v1/worker/gpu/model_runner.py", line 310, in load_model
+(EngineCore pid=43207)     self.model = model_loader.load_model(
+(EngineCore pid=43207)                  ^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=43207)   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/tracing/otel.py", line 178, in sync_wrapper
+(EngineCore pid=43207)     return func(*args, **kwargs)
+(EngineCore pid=43207)            ^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=43207)   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/model_executor/model_loader/base_loader.py", line 64, in load_model
+(EngineCore pid=43207)     self.load_weights(model, model_config)
+(EngineCore pid=43207)   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/tracing/otel.py", line 178, in sync_wrapper
+(EngineCore pid=43207)     return func(*args, **kwargs)
+(EngineCore pid=43207)            ^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=43207)   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/model_executor/model_loader/default_loader.py", line 427, in load_weights
+(EngineCore pid=43207)     loaded_weights = model.load_weights(self.get_all_weights(model_config, model))
+(EngineCore pid=43207)                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=43207)   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/model_executor/models/gemma4_mm.py", line 2110, in load_weights
+(EngineCore pid=43207)     return loader.load_weights(weights, mapper=self.hf_to_vllm_mapper)
+(EngineCore pid=43207)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=43207)   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/model_executor/model_loader/reload/torchao_decorator.py", line 50, in patched_model_load_weights
+(EngineCore pid=43207)     return original_load_weights(self, weights, *args, **kwargs)
+(EngineCore pid=43207)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=43207)   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/model_executor/models/utils.py", line 424, in load_weights
+(EngineCore pid=43207)     autoloaded_weights = set(self._load_module("", self.module, weights))
+(EngineCore pid=43207)                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=43207)   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/model_executor/models/utils.py", line 358, in _load_module
+(EngineCore pid=43207)     yield from self._load_module(
+(EngineCore pid=43207)   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/model_executor/models/utils.py", line 331, in _load_module
+(EngineCore pid=43207)     loaded_params = module_load_weights(weights)
+(EngineCore pid=43207)                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=43207)   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/model_executor/models/gemma4.py", line 1728, in load_weights
+(EngineCore pid=43207)     return loader.load_weights(_weight_iterator())
+(EngineCore pid=43207)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=43207)   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/model_executor/model_loader/reload/torchao_decorator.py", line 50, in patched_model_load_weights
+(EngineCore pid=43207)     return original_load_weights(self, weights, *args, **kwargs)
+(EngineCore pid=43207)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=43207)   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/model_executor/models/utils.py", line 424, in load_weights
+(EngineCore pid=43207)     autoloaded_weights = set(self._load_module("", self.module, weights))
+(EngineCore pid=43207)                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=43207)   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/model_executor/models/utils.py", line 358, in _load_module
+(EngineCore pid=43207)     yield from self._load_module(
+(EngineCore pid=43207)   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/model_executor/models/utils.py", line 331, in _load_module
+(EngineCore pid=43207)     loaded_params = module_load_weights(weights)
+(EngineCore pid=43207)                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=43207)   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/model_executor/models/gemma4.py", line 1508, in load_weights
+(EngineCore pid=43207)     weight_loader(param, loaded_weight)
+(EngineCore pid=43207)   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/model_executor/model_loader/weight_utils.py", line 1240, in default_weight_loader
+(EngineCore pid=43207)     assert param.size() == loaded_weight.size(), (
+(EngineCore pid=43207)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=43207) AssertionError: Attempted to load weight (torch.Size([512])) into parameter (torch.Size([256]))
+(EngineCore pid=43207) Loading safetensors checkpoint shards:   0% Completed | 0/1 [00:02<?, ?it/s]
+(EngineCore pid=43207) 
+[rank0]:[W810 21:34:40.632575720 ProcessGroupNCCL.cpp:1624] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+(APIServer pid=43083) INFO 08-10 21:34:41 [utils.py:612] [shutdown] Process manager: send sigterm to process EngineCore
+(APIServer pid=43083) Traceback (most recent call last):
+(APIServer pid=43083)   File "/home/amreschizo/gemma test/.venv/bin/vllm", line 8, in <module>
+(APIServer pid=43083)     sys.exit(main())
+(APIServer pid=43083)              ^^^^^^
+(APIServer pid=43083)   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/entrypoints/cli/main.py", line 97, in main
+(APIServer pid=43083)     args.dispatch_function(args)
+(APIServer pid=43083)   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/entrypoints/cli/serve.py", line 152, in cmd
+(APIServer pid=43083)     uvloop.run(run_server(args))
+(APIServer pid=43083)   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/uvloop/__init__.py", line 96, in run
+(APIServer pid=43083)     return __asyncio.run(
+(APIServer pid=43083)            ^^^^^^^^^^^^^^
+(APIServer pid=43083)   File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+(APIServer pid=43083)     return runner.run(main)
+(APIServer pid=43083)            ^^^^^^^^^^^^^^^^
+(APIServer pid=43083)   File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+(APIServer pid=43083)     return self._loop.run_until_complete(task)
+(APIServer pid=43083)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=43083)   File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
+(APIServer pid=43083)   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/uvloop/__init__.py", line 48, in wrapper
+(APIServer pid=43083)     return await main
+(APIServer pid=43083)            ^^^^^^^^^^
+(APIServer pid=43083)   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/entrypoints/openai/api_server.py", line 764, in run_server
+(APIServer pid=43083)     await run_server_worker(listen_address, sock, args, **uvicorn_kwargs)
+(APIServer pid=43083)   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/entrypoints/openai/api_server.py", line 778, in run_server_worker
+(APIServer pid=43083)     async with build_async_engine_client(
+(APIServer pid=43083)   File "/usr/lib/python3.12/contextlib.py", line 210, in __aenter__
+(APIServer pid=43083)     return await anext(self.gen)
+(APIServer pid=43083)            ^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=43083)   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/entrypoints/openai/api_server.py", line 132, in build_async_engine_client
+(APIServer pid=43083)     async with build_async_engine_client_from_engine_args(
+(APIServer pid=43083)   File "/usr/lib/python3.12/contextlib.py", line 210, in __aenter__
+(APIServer pid=43083)     return await anext(self.gen)
+(APIServer pid=43083)            ^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=43083)   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/entrypoints/openai/api_server.py", line 168, in build_async_engine_client_from_engine_args
+(APIServer pid=43083)     async_llm = AsyncLLM.from_vllm_config(
+(APIServer pid=43083)                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=43083)   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/v1/engine/async_llm.py", line 220, in from_vllm_config
+(APIServer pid=43083)     return cls(
+(APIServer pid=43083)            ^^^^
+(APIServer pid=43083)   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/v1/engine/async_llm.py", line 149, in __init__
+(APIServer pid=43083)     self.engine_core = EngineCoreClient.make_async_mp_client(
+(APIServer pid=43083)                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=43083)   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/tracing/otel.py", line 178, in sync_wrapper
+(APIServer pid=43083)     return func(*args, **kwargs)
+(APIServer pid=43083)            ^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=43083)   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/v1/engine/core_client.py", line 139, in make_async_mp_client
+(APIServer pid=43083)     return AsyncMPClient(*client_args)
+(APIServer pid=43083)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=43083)   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/tracing/otel.py", line 178, in sync_wrapper
+(APIServer pid=43083)     return func(*args, **kwargs)
+(APIServer pid=43083)            ^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=43083)   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/v1/engine/core_client.py", line 987, in __init__
+(APIServer pid=43083)     super().__init__(
+(APIServer pid=43083)   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/v1/engine/core_client.py", line 609, in __init__
+(APIServer pid=43083)     with launch_core_engines(
+(APIServer pid=43083)   File "/usr/lib/python3.12/contextlib.py", line 144, in __exit__
+(APIServer pid=43083)     next(self.gen)
+(APIServer pid=43083)   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/v1/engine/utils.py", line 1194, in launch_core_engines
+(APIServer pid=43083)     wait_for_engine_startup(
+(APIServer pid=43083)   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/v1/engine/utils.py", line 1253, in wait_for_engine_startup
+(APIServer pid=43083)     raise RuntimeError(
+(APIServer pid=43083) RuntimeError: Engine core initialization failed. See root cause above. Failed core proc(s): {}

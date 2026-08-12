@@ -1,0 +1,15 @@
+Warming batiai/gemma4-e2b:q6
+  batiai/gemma4-e2b:q6 short_generation run1: 159.79 tok/s TTFT=19020.2ms
+  batiai/gemma4-e2b:q6 short_generation run2: 159.93 tok/s TTFT=14357.46ms
+  batiai/gemma4-e2b:q6 medium_generation run1: 160.41 tok/s TTFT=15023.56ms
+  batiai/gemma4-e2b:q6 medium_generation run2: 160.27 tok/s TTFT=14954.01ms
+  batiai/gemma4-e2b:q6 reasoning run1: 161.29 tok/s TTFT=418.95ms
+  batiai/gemma4-e2b:q6 reasoning run2: 161.79 tok/s TTFT=393.68ms
+Warming batiai/gemma4-e4b:q6
+  batiai/gemma4-e4b:q6 short_generation run1: 102.78 tok/s TTFT=419.79ms
+  batiai/gemma4-e4b:q6 short_generation run2: 102.35 tok/s TTFT=411.98ms
+  batiai/gemma4-e4b:q6 medium_generation run1: 102.47 tok/s TTFT=419.89ms
+  batiai/gemma4-e4b:q6 medium_generation run2: 101.78 tok/s TTFT=428.14ms
+  batiai/gemma4-e4b:q6 reasoning run1: 101.6 tok/s TTFT=434.44ms
+  batiai/gemma4-e4b:q6 reasoning run2: 101.75 tok/s TTFT=415.17ms
+Done

@@ -1,0 +1,112 @@
+2026-08-11 22:26:50,364 [midgen] midgen injection benchmark starting model=google/gemma-4-E4B-it iterations=8
+2026-08-11 22:26:50,365 [midgen] creating AsyncLLM model=google/gemma-4-E4B-it gpu=1 enforce_eager=True
+INFO 08-11 22:26:51 [model.py:645] Resolved architecture: Gemma4ForConditionalGeneration
+INFO 08-11 22:26:51 [model.py:1883] Using max model len 4096
+INFO 08-11 22:26:54 [scheduler.py:242] Chunked prefill is enabled with max_num_batched_tokens=2048.
+INFO 08-11 22:26:54 [config.py:240] Gemma4 model has heterogeneous head dimensions (head_dim=256, global_head_dim=512). FA4 not available, forcing TRITON_ATTN backend.
+WARNING 08-11 22:26:54 [vllm.py:1194] Enforce eager set, disabling torch.compile and CUDAGraphs. This is equivalent to setting -cc.mode=none -cc.cudagraph_mode=none
+WARNING 08-11 22:26:54 [vllm.py:1247] Inductor compilation was disabled by user settings, optimizations settings that are only active during inductor compilation will be ignored.
+INFO 08-11 22:26:54 [kernel.py:306] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['vllm_c', 'native'], fused_add_rms_norm=['vllm_c', 'native'])
+INFO 08-11 22:26:54 [vllm.py:1426] Cudagraph is disabled under eager mode
+INFO 08-11 22:26:54 [compilation.py:329] Enabled custom fusions: norm_quant, act_quant
+(EngineCore pid=41313) INFO 08-11 22:27:25 [core.py:121] Initializing a V1 LLM engine (v0.27.1) with config: model='google/gemma-4-E4B-it', speculative_config=None, tokenizer='google/gemma-4-E4B-it', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=4096, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, data_parallel_size=1, decode_context_parallel_size=1, dcp_comm_backend=ag_rs, disable_custom_all_reduce=False, quantization=None, quantization_config=None, enforce_eager=True, enable_return_routed_experts=False, kv_cache_dtype=auto, device_config=cuda, structured_outputs_config=StructuredOutputsConfig(backend='auto', disable_any_whitespace=False, disable_additional_properties=False, reasoning_parser='', reasoning_parser_plugin='', enable_in_reasoning=False), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None, kv_cache_metrics=False, kv_cache_metrics_sample=0.01, cudagraph_metrics=False, enable_layerwise_nvtx_tracing=False, enable_mfu_metrics=False, enable_mm_processor_stats=False, enable_logging_iteration_details=False, jit_monitor_mode='warn', jit_monitor_verbose=False), seed=0, served_model_name=google/gemma-4-E4B-it, enable_prefix_caching=True, enable_chunked_prefill=True, pooler_config=None, compilation_config={'mode': <CompilationMode.NONE: 0>, 'debug_dump_path': None, 'cache_dir': '', 'compile_cache_save_format': 'binary', 'backend': 'inductor', 'custom_ops': ['all'], 'ir_enable_torch_wrap': False, 'splitting_ops': [], 'compile_mm_encoder': False, 'cudagraph_mm_encoder': False, 'encoder_cudagraph_token_budgets': [], 'encoder_cudagraph_max_vision_items_per_batch': 0, 'encoder_cudagraph_max_frames_per_batch': None, 'compile_sizes': [], 'compile_ranges_endpoints': [2048], 'inductor_compile_config': {'enable_auto_functionalized_v2': False, 'combo_kernels': True, 'benchmark_combo_kernel': True}, 'inductor_passes': {}, 'cudagraph_mode': <CUDAGraphMode.NONE: 0>, 'cudagraph_num_of_warmups': 0, 'cudagraph_capture_sizes': [], 'cudagraph_copy_inputs': False, 'cudagraph_specialize_lora': True, 'use_inductor_graph_partition': False, 'pass_config': {'fuse_norm_quant': True, 'fuse_act_quant': True, 'fuse_attn_quant': False, 'enable_sp': False, 'fuse_gemm_comms': False, 'fuse_allreduce_rms': False, 'enable_qk_norm_rope_fusion': False, 'fuse_rope_kvcache_cat_mla': False, 'fuse_act_padding': False, 'fuse_qk_norm_rope_kvcache': False}, 'max_cudagraph_capture_size': 0, 'dynamic_shapes_config': {'type': <DynamicShapesType.BACKED: 'backed'>, 'evaluate_guards': False, 'assume_32_bit_indexing': False}, 'local_cache_dir': None, 'fast_moe_cold_start': False, 'static_all_moe_layers': []}, kernel_config=KernelConfig(ir_op_priority=IrOpPriorityConfig(rms_norm=['vllm_c', 'native'], fused_add_rms_norm=['vllm_c', 'native']), enable_flashinfer_autotune=True, enable_cutedsl_warmup=True, enable_jit_warmup=True, enable_bf16x3_router_gemm=False, moe_backend='auto', linear_backend='auto')
+(EngineCore pid=41313) INFO 08-11 22:27:26 [parallel_state.py:1640] world_size=1 rank=0 local_rank=0 distributed_init_method=tcp://192.168.6.110:59697 backend=nccl
+(EngineCore pid=41313) INFO 08-11 22:27:26 [parallel_state.py:1977] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+(EngineCore pid=41313) INFO 08-11 22:27:26 [gpu_worker.py:385] Using V2 Model Runner
+(EngineCore pid=41313) INFO 08-11 22:27:27 [model_runner.py:308] Loading model from scratch...
+(EngineCore pid=41313) INFO 08-11 22:27:27 [kernel.py:306] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['vllm_c', 'native'], fused_add_rms_norm=['vllm_c', 'native'])
+(EngineCore pid=41313) INFO 08-11 22:27:27 [cuda.py:422] Using AttentionBackendEnum.TRITON_ATTN backend.
+(EngineCore pid=41313) INFO 08-11 22:27:27 [cuda.py:422] Using AttentionBackendEnum.TRITON_ATTN backend.
+(EngineCore pid=41313) INFO 08-11 22:27:28 [weight_utils.py:867] Filesystem type for checkpoints: EXT4. Checkpoint size: 14.89 GiB. Available RAM: 114.51 GiB.
+(EngineCore pid=41313) INFO 08-11 22:27:28 [weight_utils.py:890] Auto-prefetch is disabled because the filesystem (EXT4) is not a recognized network FS (NFS/Lustre). If you want to force prefetching, start vLLM with --safetensors-load-strategy=prefetch.
+(EngineCore pid=41313) Loading safetensors checkpoint shards:   0% Completed | 0/1 [00:00<?, ?it/s]
+(EngineCore pid=41313) Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:01<00:00,  1.87s/it]
+(EngineCore pid=41313) Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:01<00:00,  1.87s/it]
+(EngineCore pid=41313) 
+(EngineCore pid=41313) INFO 08-11 22:27:30 [default_loader.py:430] Loading weights took 1.88 seconds
+(EngineCore pid=41313) INFO 08-11 22:27:31 [model_runner.py:329] Model loading took 15.19 GiB and 4.829848 seconds
+(EngineCore pid=41313) INFO 08-11 22:27:31 [topk_topp_sampler.py:46] FlashInfer top-p/top-k sampling disabled via VLLM_USE_FLASHINFER_SAMPLER=0.
+(EngineCore pid=41313) INFO 08-11 22:27:43 [encoder_runner.py:80] Encoder cache will be initialized with a budget of 2496 tokens, and profiled with 1 video items of the maximum feature size.
+(EngineCore pid=41313) INFO 08-11 22:27:44 [gpu_worker.py:563] Available KV cache memory: 4.36 GiB
+(EngineCore pid=41313) INFO 08-11 22:27:45 [kv_cache_utils.py:2235] GPU KV cache size: 81,128 tokens
+(EngineCore pid=41313) INFO 08-11 22:27:45 [kv_cache_utils.py:2236] Maximum concurrency for 4,096 tokens per request: 19.81x
+(EngineCore pid=41313) INFO 08-11 22:27:45 [gpu_worker.py:789] Free memory on device (23.29/23.56 GiB) on startup. Desired GPU memory utilization is (0.85, 20.02 GiB). Actual usage is 15.45 GiB for consumed memory (weights + non-torch), 0.22 GiB for peak activation, and 0.0 GiB for CUDAGraph memory. Replace gpu_memory_utilization config with `--kv-cache-memory=4520976180` (4.21 GiB) to fit into requested memory, or `--kv-cache-memory=8022043648` (7.47 GiB) to fully utilize gpu memory. Current kv cache memory in use is 4.36 GiB.
+(EngineCore pid=41313) INFO 08-11 22:27:45 [jit_monitor.py:79] Kernel JIT monitor activated; monitored JIT compilations during inference will use mode=warn.
+(EngineCore pid=41313) INFO 08-11 22:27:46 [core.py:355] init engine (profile, create kv cache, warmup model) took 14.76 s
+(EngineCore pid=41313) INFO 08-11 22:27:46 [kernel.py:306] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['vllm_c', 'native'], fused_add_rms_norm=['vllm_c', 'native'])
+2026-08-11 22:27:46,383 [midgen] engine ready in 56008.0 ms
+2026-08-11 22:27:46,383 [midgen] warmup: starting short generation (google/gemma-4-E4B-it)
+WARNING 08-11 22:27:46 [input_processor.py:291] Passing raw prompts to InputProcessor is deprecated and will be removed in v0.18. You should instead pass the outputs of Renderer.render_cmpl() or Renderer.render_chat().
+(EngineCore pid=41313) WARNING 08-11 22:27:46 [jit_monitor.py:135] Triton kernel JIT compilation during inference: kernel_unified_attention. This causes a latency spike; consider extending warmup to cover this shape/config.
+2026-08-11 22:27:46,673 [midgen] warmup: finished in 289.3 ms
+2026-08-11 22:27:46,673 [midgen] iter 1: starting generate loop
+2026-08-11 22:27:46,673 [midgen] iter 1: yielding initial StreamingInput
+2026-08-11 22:27:46,706 [midgen] iter 1: queueing injection signal
+2026-08-11 22:27:46,706 [midgen] iter 1: yielding injection StreamingInput
+2026-08-11 22:27:46,739 [midgen] iter 1: inject_to_first_token_ms=32.52 paused_warm_reaction_ms=32.58
+2026-08-11 22:27:46,739 [midgen] iter 2: starting generate loop
+2026-08-11 22:27:46,739 [midgen] iter 2: yielding initial StreamingInput
+2026-08-11 22:27:46,771 [midgen] iter 2: queueing injection signal
+2026-08-11 22:27:46,771 [midgen] iter 2: yielding injection StreamingInput
+2026-08-11 22:27:46,805 [midgen] iter 2: inject_to_first_token_ms=33.19 paused_warm_reaction_ms=33.24
+2026-08-11 22:27:46,805 [midgen] iter 3: starting generate loop
+2026-08-11 22:27:46,805 [midgen] iter 3: yielding initial StreamingInput
+2026-08-11 22:27:46,837 [midgen] iter 3: queueing injection signal
+2026-08-11 22:27:46,837 [midgen] iter 3: yielding injection StreamingInput
+2026-08-11 22:27:46,871 [midgen] iter 3: inject_to_first_token_ms=33.96 paused_warm_reaction_ms=34.0
+2026-08-11 22:27:46,871 [midgen] iter 4: starting generate loop
+2026-08-11 22:27:46,872 [midgen] iter 4: yielding initial StreamingInput
+2026-08-11 22:27:46,904 [midgen] iter 4: queueing injection signal
+2026-08-11 22:27:46,904 [midgen] iter 4: yielding injection StreamingInput
+2026-08-11 22:27:46,938 [midgen] iter 4: inject_to_first_token_ms=33.75 paused_warm_reaction_ms=33.79
+2026-08-11 22:27:46,938 [midgen] iter 5: starting generate loop
+2026-08-11 22:27:46,938 [midgen] iter 5: yielding initial StreamingInput
+2026-08-11 22:27:46,971 [midgen] iter 5: queueing injection signal
+2026-08-11 22:27:46,971 [midgen] iter 5: yielding injection StreamingInput
+2026-08-11 22:27:47,003 [midgen] iter 5: inject_to_first_token_ms=32.6 paused_warm_reaction_ms=32.65
+2026-08-11 22:27:47,003 [midgen] iter 6: starting generate loop
+2026-08-11 22:27:47,004 [midgen] iter 6: yielding initial StreamingInput
+2026-08-11 22:27:47,037 [midgen] iter 6: queueing injection signal
+2026-08-11 22:27:47,037 [midgen] iter 6: yielding injection StreamingInput
+2026-08-11 22:27:47,070 [midgen] iter 6: inject_to_first_token_ms=32.93 paused_warm_reaction_ms=33.01
+2026-08-11 22:27:47,070 [midgen] iter 7: starting generate loop
+2026-08-11 22:27:47,070 [midgen] iter 7: yielding initial StreamingInput
+2026-08-11 22:27:47,103 [midgen] iter 7: queueing injection signal
+2026-08-11 22:27:47,104 [midgen] iter 7: yielding injection StreamingInput
+2026-08-11 22:27:47,137 [midgen] iter 7: inject_to_first_token_ms=32.99 paused_warm_reaction_ms=33.05
+2026-08-11 22:27:47,137 [midgen] iter 8: starting generate loop
+2026-08-11 22:27:47,137 [midgen] iter 8: yielding initial StreamingInput
+2026-08-11 22:27:47,170 [midgen] iter 8: queueing injection signal
+2026-08-11 22:27:47,170 [midgen] iter 8: yielding injection StreamingInput
+2026-08-11 22:27:47,203 [midgen] iter 8: inject_to_first_token_ms=33.22 paused_warm_reaction_ms=33.28
+2026-08-11 22:27:47,204 [midgen] shutting down engine
+INFO 08-11 22:27:47 [core_client.py:686] [shutdown] MPClient: start timeout=default
+INFO 08-11 22:27:47 [core_client.py:688] [shutdown] MPClient: stopping engine manager
+INFO 08-11 22:27:47 [utils.py:612] [shutdown] Process manager: send sigterm to process EngineCore
+(EngineCore pid=41313) INFO 08-11 22:27:47 [core.py:1332] [shutdown] EngineCore: trigger received signal=SIGTERM
+(EngineCore pid=41313) INFO 08-11 22:27:47 [core.py:1468] [shutdown] EngineCore: start mode=abort timeout=0s
+(EngineCore pid=41313) INFO 08-11 22:27:47 [core.py:1499] [shutdown] EngineCore: request processing complete; starting resource teardown
+(EngineCore pid=41313) INFO 08-11 22:27:47 [core.py:1345] [shutdown] EngineCore: exiting busy loop
+INFO 08-11 22:27:48 [core_client.py:690] [shutdown] MPClient: engine manager stopped
+INFO 08-11 22:27:48 [core_client.py:691] [shutdown] MPClient: cleaning up background resources
+INFO 08-11 22:27:48 [core_client.py:693] [shutdown] MPClient: complete
+{
+  "inject_to_first_token_ms": {
+    "avg": 33.15,
+    "min": 32.52,
+    "max": 33.96,
+    "count": 8
+  },
+  "paused_warm_reaction_ms": {
+    "avg": 33.2,
+    "min": 32.58,
+    "max": 34.0,
+    "count": 8
+  },
+  "generation_to_first_token_ms": {
+    "avg": 32.79,
+    "min": 32.35,
+    "max": 33.25,
+    "count": 8
+  }
+}

@@ -1,0 +1,72 @@
+(APIServer pid=44824) INFO 08-10 21:38:32 [api_utils.py:345] 
+(APIServer pid=44824) INFO 08-10 21:38:32 [api_utils.py:345]        █     █     █▄   ▄█
+(APIServer pid=44824) INFO 08-10 21:38:32 [api_utils.py:345]  ▄▄ ▄█ █     █     █ ▀▄▀ █  version 0.27.0
+(APIServer pid=44824) INFO 08-10 21:38:32 [api_utils.py:345]   █▄█▀ █     █     █     █  model   google/gemma-4-E4B-it
+(APIServer pid=44824) INFO 08-10 21:38:32 [api_utils.py:345]    ▀▀  ▀▀▀▀▀ ▀▀▀▀▀ ▀     ▀
+(APIServer pid=44824) INFO 08-10 21:38:32 [api_utils.py:345] 
+(APIServer pid=44824) INFO 08-10 21:38:32 [api_utils.py:273] non-default args: {'model_tag': 'google/gemma-4-E4B-it', 'model': 'google/gemma-4-E4B-it', 'max_model_len': 4096, 'enforce_eager': True, 'model_impl': 'transformers', 'gpu_memory_utilization': 0.9, 'enable_prefix_caching': True}
+(APIServer pid=44824) [transformers] Reading global config value for per-layer attribute `head_dim` on a heterogeneous config. Only do this if the caller can safely handle heterogeneous configs; code that assumes a homogeneous model may use the global value incorrectly.
+(APIServer pid=44824) INFO 08-10 21:38:40 [model.py:645] Resolved architecture: TransformersMultiModalForCausalLM
+(APIServer pid=44824) INFO 08-10 21:38:40 [model.py:1883] Using max model len 4096
+(APIServer pid=44824) WARNING 08-10 21:39:11 [vllm.py:1194] Enforce eager set, disabling torch.compile and CUDAGraphs. This is equivalent to setting -cc.mode=none -cc.cudagraph_mode=none
+(APIServer pid=44824) WARNING 08-10 21:39:11 [vllm.py:1247] Inductor compilation was disabled by user settings, optimizations settings that are only active during inductor compilation will be ignored.
+(APIServer pid=44824) INFO 08-10 21:39:11 [kernel.py:306] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['vllm_c', 'native'], fused_add_rms_norm=['vllm_c', 'native'])
+(APIServer pid=44824) INFO 08-10 21:39:11 [vllm.py:1426] Cudagraph is disabled under eager mode
+(APIServer pid=44824) INFO 08-10 21:39:11 [compilation.py:329] Enabled custom fusions: norm_quant, act_quant
+(APIServer pid=44824) Traceback (most recent call last):
+(APIServer pid=44824)   File "/home/amreschizo/gemma test/.venv/bin/vllm", line 8, in <module>
+(APIServer pid=44824)     sys.exit(main())
+(APIServer pid=44824)              ^^^^^^
+(APIServer pid=44824)   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/entrypoints/cli/main.py", line 97, in main
+(APIServer pid=44824)     args.dispatch_function(args)
+(APIServer pid=44824)   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/entrypoints/cli/serve.py", line 152, in cmd
+(APIServer pid=44824)     uvloop.run(run_server(args))
+(APIServer pid=44824)   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/uvloop/__init__.py", line 96, in run
+(APIServer pid=44824)     return __asyncio.run(
+(APIServer pid=44824)            ^^^^^^^^^^^^^^
+(APIServer pid=44824)   File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+(APIServer pid=44824)     return runner.run(main)
+(APIServer pid=44824)            ^^^^^^^^^^^^^^^^
+(APIServer pid=44824)   File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+(APIServer pid=44824)     return self._loop.run_until_complete(task)
+(APIServer pid=44824)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=44824)   File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
+(APIServer pid=44824)   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/uvloop/__init__.py", line 48, in wrapper
+(APIServer pid=44824)     return await main
+(APIServer pid=44824)            ^^^^^^^^^^
+(APIServer pid=44824)   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/entrypoints/openai/api_server.py", line 764, in run_server
+(APIServer pid=44824)     await run_server_worker(listen_address, sock, args, **uvicorn_kwargs)
+(APIServer pid=44824)   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/entrypoints/openai/api_server.py", line 778, in run_server_worker
+(APIServer pid=44824)     async with build_async_engine_client(
+(APIServer pid=44824)   File "/usr/lib/python3.12/contextlib.py", line 210, in __aenter__
+(APIServer pid=44824)     return await anext(self.gen)
+(APIServer pid=44824)            ^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=44824)   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/entrypoints/openai/api_server.py", line 132, in build_async_engine_client
+(APIServer pid=44824)     async with build_async_engine_client_from_engine_args(
+(APIServer pid=44824)   File "/usr/lib/python3.12/contextlib.py", line 210, in __aenter__
+(APIServer pid=44824)     return await anext(self.gen)
+(APIServer pid=44824)            ^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=44824)   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/entrypoints/openai/api_server.py", line 168, in build_async_engine_client_from_engine_args
+(APIServer pid=44824)     async_llm = AsyncLLM.from_vllm_config(
+(APIServer pid=44824)                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=44824)   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/v1/engine/async_llm.py", line 220, in from_vllm_config
+(APIServer pid=44824)     return cls(
+(APIServer pid=44824)            ^^^^
+(APIServer pid=44824)   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/v1/engine/async_llm.py", line 138, in __init__
+(APIServer pid=44824)     self.input_processor = InputProcessor(self.vllm_config, renderer)
+(APIServer pid=44824)                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=44824)   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/v1/engine/input_processor.py", line 64, in __init__
+(APIServer pid=44824)     mm_budget = MultiModalBudget(vllm_config, mm_registry)
+(APIServer pid=44824)                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=44824)   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/multimodal/encoder_budget.py", line 94, in __init__
+(APIServer pid=44824)     all_mm_max_toks_per_item = get_mm_max_toks_per_item(
+(APIServer pid=44824)                                ^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=44824)   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/multimodal/encoder_budget.py", line 26, in get_mm_max_toks_per_item
+(APIServer pid=44824)     max_tokens_per_item = processor.info.get_mm_max_tokens_per_item(
+(APIServer pid=44824)                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=44824)   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/model_executor/models/transformers/multimodal.py", line 126, in get_mm_max_tokens_per_item
+(APIServer pid=44824)     result["audio"] = self.get_max_audio_tokens()
+(APIServer pid=44824)                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=44824)   File "/home/amreschizo/gemma test/.venv/lib/python3.12/site-packages/vllm/model_executor/models/transformers/multimodal.py", line 145, in get_max_audio_tokens
+(APIServer pid=44824)     raise ValueError(
+(APIServer pid=44824) ValueError: Unable to get max input length from Gemma4AudioConfig. The following attribute names were checked: ('max_source_positions', 'max_position_embeddings', 'max_pos_emb').

@@ -1,0 +1,82 @@
+2026-08-11 22:17:58,250 [midgen] midgen injection test starting model=google/gemma-4-E4B-it
+2026-08-11 22:17:58,250 [midgen] creating AsyncLLM model=google/gemma-4-E4B-it gpu=1 enforce_eager=True
+INFO 08-11 22:17:58 [model.py:645] Resolved architecture: Gemma4ForConditionalGeneration
+INFO 08-11 22:17:58 [model.py:1883] Using max model len 4096
+INFO 08-11 22:18:02 [scheduler.py:242] Chunked prefill is enabled with max_num_batched_tokens=2048.
+INFO 08-11 22:18:02 [config.py:240] Gemma4 model has heterogeneous head dimensions (head_dim=256, global_head_dim=512). FA4 not available, forcing TRITON_ATTN backend.
+WARNING 08-11 22:18:02 [vllm.py:1194] Enforce eager set, disabling torch.compile and CUDAGraphs. This is equivalent to setting -cc.mode=none -cc.cudagraph_mode=none
+WARNING 08-11 22:18:02 [vllm.py:1247] Inductor compilation was disabled by user settings, optimizations settings that are only active during inductor compilation will be ignored.
+INFO 08-11 22:18:02 [kernel.py:306] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['vllm_c', 'native'], fused_add_rms_norm=['vllm_c', 'native'])
+INFO 08-11 22:18:02 [vllm.py:1426] Cudagraph is disabled under eager mode
+INFO 08-11 22:18:02 [compilation.py:329] Enabled custom fusions: norm_quant, act_quant
+(EngineCore pid=39478) INFO 08-11 22:18:32 [core.py:121] Initializing a V1 LLM engine (v0.27.1) with config: model='google/gemma-4-E4B-it', speculative_config=None, tokenizer='google/gemma-4-E4B-it', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=4096, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, data_parallel_size=1, decode_context_parallel_size=1, dcp_comm_backend=ag_rs, disable_custom_all_reduce=False, quantization=None, quantization_config=None, enforce_eager=True, enable_return_routed_experts=False, kv_cache_dtype=auto, device_config=cuda, structured_outputs_config=StructuredOutputsConfig(backend='auto', disable_any_whitespace=False, disable_additional_properties=False, reasoning_parser='', reasoning_parser_plugin='', enable_in_reasoning=False), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None, kv_cache_metrics=False, kv_cache_metrics_sample=0.01, cudagraph_metrics=False, enable_layerwise_nvtx_tracing=False, enable_mfu_metrics=False, enable_mm_processor_stats=False, enable_logging_iteration_details=False, jit_monitor_mode='warn', jit_monitor_verbose=False), seed=0, served_model_name=google/gemma-4-E4B-it, enable_prefix_caching=True, enable_chunked_prefill=True, pooler_config=None, compilation_config={'mode': <CompilationMode.NONE: 0>, 'debug_dump_path': None, 'cache_dir': '', 'compile_cache_save_format': 'binary', 'backend': 'inductor', 'custom_ops': ['all'], 'ir_enable_torch_wrap': False, 'splitting_ops': [], 'compile_mm_encoder': False, 'cudagraph_mm_encoder': False, 'encoder_cudagraph_token_budgets': [], 'encoder_cudagraph_max_vision_items_per_batch': 0, 'encoder_cudagraph_max_frames_per_batch': None, 'compile_sizes': [], 'compile_ranges_endpoints': [2048], 'inductor_compile_config': {'enable_auto_functionalized_v2': False, 'combo_kernels': True, 'benchmark_combo_kernel': True}, 'inductor_passes': {}, 'cudagraph_mode': <CUDAGraphMode.NONE: 0>, 'cudagraph_num_of_warmups': 0, 'cudagraph_capture_sizes': [], 'cudagraph_copy_inputs': False, 'cudagraph_specialize_lora': True, 'use_inductor_graph_partition': False, 'pass_config': {'fuse_norm_quant': True, 'fuse_act_quant': True, 'fuse_attn_quant': False, 'enable_sp': False, 'fuse_gemm_comms': False, 'fuse_allreduce_rms': False, 'enable_qk_norm_rope_fusion': False, 'fuse_rope_kvcache_cat_mla': False, 'fuse_act_padding': False, 'fuse_qk_norm_rope_kvcache': False}, 'max_cudagraph_capture_size': 0, 'dynamic_shapes_config': {'type': <DynamicShapesType.BACKED: 'backed'>, 'evaluate_guards': False, 'assume_32_bit_indexing': False}, 'local_cache_dir': None, 'fast_moe_cold_start': False, 'static_all_moe_layers': []}, kernel_config=KernelConfig(ir_op_priority=IrOpPriorityConfig(rms_norm=['vllm_c', 'native'], fused_add_rms_norm=['vllm_c', 'native']), enable_flashinfer_autotune=True, enable_cutedsl_warmup=True, enable_jit_warmup=True, enable_bf16x3_router_gemm=False, moe_backend='auto', linear_backend='auto')
+(EngineCore pid=39478) INFO 08-11 22:18:32 [parallel_state.py:1640] world_size=1 rank=0 local_rank=0 distributed_init_method=tcp://192.168.6.110:51705 backend=nccl
+(EngineCore pid=39478) INFO 08-11 22:18:33 [parallel_state.py:1977] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+(EngineCore pid=39478) INFO 08-11 22:18:33 [gpu_worker.py:385] Using V2 Model Runner
+(EngineCore pid=39478) INFO 08-11 22:18:33 [model_runner.py:308] Loading model from scratch...
+(EngineCore pid=39478) INFO 08-11 22:18:34 [kernel.py:306] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['vllm_c', 'native'], fused_add_rms_norm=['vllm_c', 'native'])
+(EngineCore pid=39478) INFO 08-11 22:18:34 [cuda.py:422] Using AttentionBackendEnum.TRITON_ATTN backend.
+(EngineCore pid=39478) INFO 08-11 22:18:34 [cuda.py:422] Using AttentionBackendEnum.TRITON_ATTN backend.
+(EngineCore pid=39478) INFO 08-11 22:18:35 [weight_utils.py:867] Filesystem type for checkpoints: EXT4. Checkpoint size: 14.89 GiB. Available RAM: 114.51 GiB.
+(EngineCore pid=39478) INFO 08-11 22:18:35 [weight_utils.py:890] Auto-prefetch is disabled because the filesystem (EXT4) is not a recognized network FS (NFS/Lustre). If you want to force prefetching, start vLLM with --safetensors-load-strategy=prefetch.
+(EngineCore pid=39478) Loading safetensors checkpoint shards:   0% Completed | 0/1 [00:00<?, ?it/s]
+(EngineCore pid=39478) Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:01<00:00,  1.80s/it]
+(EngineCore pid=39478) Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:01<00:00,  1.80s/it]
+(EngineCore pid=39478) 
+(EngineCore pid=39478) INFO 08-11 22:18:37 [default_loader.py:430] Loading weights took 1.80 seconds
+(EngineCore pid=39478) INFO 08-11 22:18:38 [model_runner.py:329] Model loading took 15.19 GiB and 4.766498 seconds
+(EngineCore pid=39478) INFO 08-11 22:18:38 [topk_topp_sampler.py:46] FlashInfer top-p/top-k sampling disabled via VLLM_USE_FLASHINFER_SAMPLER=0.
+(EngineCore pid=39478) INFO 08-11 22:18:50 [encoder_runner.py:80] Encoder cache will be initialized with a budget of 2496 tokens, and profiled with 1 video items of the maximum feature size.
+(EngineCore pid=39478) INFO 08-11 22:18:51 [gpu_worker.py:563] Available KV cache memory: 4.36 GiB
+(EngineCore pid=39478) INFO 08-11 22:18:52 [kv_cache_utils.py:2235] GPU KV cache size: 81,128 tokens
+(EngineCore pid=39478) INFO 08-11 22:18:52 [kv_cache_utils.py:2236] Maximum concurrency for 4,096 tokens per request: 19.81x
+(EngineCore pid=39478) INFO 08-11 22:18:52 [gpu_worker.py:789] Free memory on device (23.29/23.56 GiB) on startup. Desired GPU memory utilization is (0.85, 20.02 GiB). Actual usage is 15.45 GiB for consumed memory (weights + non-torch), 0.22 GiB for peak activation, and 0.0 GiB for CUDAGraph memory. Replace gpu_memory_utilization config with `--kv-cache-memory=4520976180` (4.21 GiB) to fit into requested memory, or `--kv-cache-memory=8022043648` (7.47 GiB) to fully utilize gpu memory. Current kv cache memory in use is 4.36 GiB.
+(EngineCore pid=39478) INFO 08-11 22:18:52 [jit_monitor.py:79] Kernel JIT monitor activated; monitored JIT compilations during inference will use mode=warn.
+(EngineCore pid=39478) INFO 08-11 22:18:53 [core.py:355] init engine (profile, create kv cache, warmup model) took 14.94 s
+(EngineCore pid=39478) INFO 08-11 22:18:53 [kernel.py:306] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['vllm_c', 'native'], fused_add_rms_norm=['vllm_c', 'native'])
+2026-08-11 22:18:53,490 [midgen] engine ready in 55229.4 ms
+2026-08-11 22:18:53,490 [midgen] warmup: starting short generation (google/gemma-4-E4B-it)
+WARNING 08-11 22:18:53 [input_processor.py:291] Passing raw prompts to InputProcessor is deprecated and will be removed in v0.18. You should instead pass the outputs of Renderer.render_cmpl() or Renderer.render_chat().
+(EngineCore pid=39478) WARNING 08-11 22:18:53 [jit_monitor.py:135] Triton kernel JIT compilation during inference: kernel_unified_attention. This causes a latency spike; consider extending warmup to cover this shape/config.
+2026-08-11 22:18:53,765 [midgen] warmup: finished in 274.6 ms
+2026-08-11 22:18:53,765 [midgen] midgen: starting generate loop
+2026-08-11 22:18:53,766 [midgen] midgen: yielding initial StreamingInput
+2026-08-11 22:18:53,799 [midgen] midgen: output chunk #1 finished=False
+2026-08-11 22:18:53,799 [midgen] midgen: queueing injection signal
+2026-08-11 22:18:53,799 [midgen] midgen: yielding injection StreamingInput
+2026-08-11 22:18:53,832 [midgen] midgen: shutting down engine
+INFO 08-11 22:18:53 [core_client.py:686] [shutdown] MPClient: start timeout=default
+INFO 08-11 22:18:53 [core_client.py:688] [shutdown] MPClient: stopping engine manager
+INFO 08-11 22:18:53 [utils.py:612] [shutdown] Process manager: send sigterm to process EngineCore
+(EngineCore pid=39478) INFO 08-11 22:18:53 [core.py:1332] [shutdown] EngineCore: trigger received signal=SIGTERM
+(EngineCore pid=39478) INFO 08-11 22:18:53 [core.py:1468] [shutdown] EngineCore: start mode=abort timeout=0s
+(EngineCore pid=39478) INFO 08-11 22:18:53 [core.py:1499] [shutdown] EngineCore: request processing complete; starting resource teardown
+(EngineCore pid=39478) INFO 08-11 22:18:53 [core.py:1345] [shutdown] EngineCore: exiting busy loop
+INFO 08-11 22:18:54 [core_client.py:690] [shutdown] MPClient: engine manager stopped
+INFO 08-11 22:18:54 [core_client.py:691] [shutdown] MPClient: cleaning up background resources
+INFO 08-11 22:18:54 [core_client.py:693] [shutdown] MPClient: complete
+{
+  "test": "mid_generation_context_injection",
+  "model": "google/gemma-4-E4B-it",
+  "api": "AsyncLLM.generate(StreamingInput async generator)",
+  "vllm_version": "0.27.1",
+  "enforce_eager": true,
+  "attention_backend": "TRITON_ATTN (Gemma4 on Ampere)",
+  "initial_prompt": "You are a helpful assistant. Continue the story naturally.\nStory: Once upon a time, a traveler entered a dark forest.",
+  "injection_text": " Suddenly, they heard a loud roar behind them.",
+  "full_output": " Continue\n",
+  "combined_text_sample": "You are a helpful assistant. Continue the story naturally.\nStory: Once upon a time, a traveler entered a dark forest. Suddenly, they heard a loud roar behind them. Continue\n",
+  "tokens_before_injection": 1,
+  "tokens_after_injection": 1,
+  "output_chunks": 2,
+  "decode_steps": 2,
+  "elapsed_ms": 1204.08,
+  "success": true,
+  "api_error": null,
+  "http_api_available": false,
+  "notes": [
+    "Mid-generation injection requires AsyncLLM Python API; not exposed via OpenAI HTTP endpoint.",
+    "StreamingInput with resumable async generator appends within a session (vLLM 0.27+).",
+    "enforce_eager=True and FLASH_ATTN avoid first-request Triton JIT hang on Gemma 4."
+  ]
+}

@@ -1,0 +1,931 @@
+{
+  "timestamp": "2026-08-10 20:48:56",
+  "context_sizes_tested": [
+    5000,
+    20000,
+    50000,
+    100000
+  ],
+  "results": [
+    {
+      "context_target_chars": 5000,
+      "context_actual_chars": 7887,
+      "prompt_tokens": 1775,
+      "model": "gemma4:e2b",
+      "test_id": "early_fact_2",
+      "position": "early",
+      "question": "What is the secret access code for Project NEBULA-7?",
+      "response": "Secret Access Code: ALPHA-TANGO-7749",
+      "passed": true,
+      "matched_patterns": [
+        "ALPHA-TANGO-7749"
+      ],
+      "generation_time_ms": 7522.2
+    },
+    {
+      "context_target_chars": 5000,
+      "context_actual_chars": 7887,
+      "prompt_tokens": 1768,
+      "model": "gemma4:e2b",
+      "test_id": "early_fact_4",
+      "position": "early",
+      "question": "What is the emergency shutdown command?",
+      "response": "NEBULA-SCRAM-OMEGA",
+      "passed": true,
+      "matched_patterns": [
+        "NEBULA-SCRAM-OMEGA"
+      ],
+      "generation_time_ms": 557.4
+    },
+    {
+      "context_target_chars": 5000,
+      "context_actual_chars": 7887,
+      "prompt_tokens": 1772,
+      "model": "gemma4:e2b",
+      "test_id": "early_fact_5",
+      "position": "early",
+      "question": "What satellite frequency does NEBULA-7 use?",
+      "response": "Satellite Frequency: 2247.5 MHz (Ku-band)",
+      "passed": true,
+      "matched_patterns": [
+        "2247[.,]5\\s*MHz",
+        "ku.?band"
+      ],
+      "generation_time_ms": 576.2
+    },
+    {
+      "context_target_chars": 5000,
+      "context_actual_chars": 7887,
+      "prompt_tokens": 1769,
+      "model": "gemma4:e2b",
+      "test_id": "late_fact_6",
+      "position": "late",
+      "question": "What is the backup server IP address?",
+      "response": "Backup Server IP: 10.42.17.93",
+      "passed": true,
+      "matched_patterns": [
+        "10\\.42\\.17\\.93"
+      ],
+      "generation_time_ms": 588.1
+    },
+    {
+      "context_target_chars": 5000,
+      "context_actual_chars": 7887,
+      "prompt_tokens": 1774,
+      "model": "gemma4:e2b",
+      "test_id": "late_fact_8",
+      "position": "late",
+      "question": "Who is the authorized pen tester and what is their contact email?",
+      "response": "ANSWER: Authorized Pen Tester: CyberShield Inc. (contact: audit@cybershield.com)",
+      "passed": true,
+      "matched_patterns": [
+        "cybershield",
+        "audit@cybershield"
+      ],
+      "generation_time_ms": 619.8
+    },
+    {
+      "context_target_chars": 5000,
+      "context_actual_chars": 7887,
+      "prompt_tokens": 1770,
+      "model": "gemma4:e2b",
+      "test_id": "late_fact_10",
+      "position": "late",
+      "question": "What is the failover datacenter location?",
+      "response": "Failover Datacenter: us-east-1-nebula-dr",
+      "passed": true,
+      "matched_patterns": [
+        "us-east-1-nebula-dr"
+      ],
+      "generation_time_ms": 585.9
+    },
+    {
+      "context_target_chars": 5000,
+      "context_actual_chars": 7887,
+      "prompt_tokens": 1773,
+      "model": "gemma4:e2b",
+      "test_id": "cross_position",
+      "position": "cross",
+      "question": "What is the secret access code AND the backup server IP?",
+      "response": "Secret Access Code: ALPHA-TANGO-7749, Backup Server IP: 10.42.17.93",
+      "passed": true,
+      "matched_patterns": [
+        "ALPHA-TANGO-7749",
+        "10\\.42\\.17\\.93"
+      ],
+      "generation_time_ms": 675.6
+    },
+    {
+      "context_target_chars": 5000,
+      "context_actual_chars": 7887,
+      "prompt_tokens": 1775,
+      "model": "gemma4:e4b",
+      "test_id": "early_fact_2",
+      "position": "early",
+      "question": "What is the secret access code for Project NEBULA-7?",
+      "response": "ALPHA-TANGO-7749",
+      "passed": true,
+      "matched_patterns": [
+        "ALPHA-TANGO-7749"
+      ],
+      "generation_time_ms": 8824.9
+    },
+    {
+      "context_target_chars": 5000,
+      "context_actual_chars": 7887,
+      "prompt_tokens": 1768,
+      "model": "gemma4:e4b",
+      "test_id": "early_fact_4",
+      "position": "early",
+      "question": "What is the emergency shutdown command?",
+      "response": "NEBULA-SCRAM-OMEGA",
+      "passed": true,
+      "matched_patterns": [
+        "NEBULA-SCRAM-OMEGA"
+      ],
+      "generation_time_ms": 598.9
+    },
+    {
+      "context_target_chars": 5000,
+      "context_actual_chars": 7887,
+      "prompt_tokens": 1772,
+      "model": "gemma4:e4b",
+      "test_id": "early_fact_5",
+      "position": "early",
+      "question": "What satellite frequency does NEBULA-7 use?",
+      "response": "2247.5 MHz (Ku-band)",
+      "passed": true,
+      "matched_patterns": [
+        "2247[.,]5\\s*MHz",
+        "ku.?band"
+      ],
+      "generation_time_ms": 603.7
+    },
+    {
+      "context_target_chars": 5000,
+      "context_actual_chars": 7887,
+      "prompt_tokens": 1769,
+      "model": "gemma4:e4b",
+      "test_id": "late_fact_6",
+      "position": "late",
+      "question": "What is the backup server IP address?",
+      "response": "10.42.17.93",
+      "passed": true,
+      "matched_patterns": [
+        "10\\.42\\.17\\.93"
+      ],
+      "generation_time_ms": 610.7
+    },
+    {
+      "context_target_chars": 5000,
+      "context_actual_chars": 7887,
+      "prompt_tokens": 1774,
+      "model": "gemma4:e4b",
+      "test_id": "late_fact_8",
+      "position": "late",
+      "question": "Who is the authorized pen tester and what is their contact email?",
+      "response": "The authorized pen tester is CyberShield Inc. and their contact email is audit@cybershield.com.",
+      "passed": true,
+      "matched_patterns": [
+        "cybershield",
+        "audit@cybershield"
+      ],
+      "generation_time_ms": 706.5
+    },
+    {
+      "context_target_chars": 5000,
+      "context_actual_chars": 7887,
+      "prompt_tokens": 1770,
+      "model": "gemma4:e4b",
+      "test_id": "late_fact_10",
+      "position": "late",
+      "question": "What is the failover datacenter location?",
+      "response": "us-east-1-nebula-dr",
+      "passed": true,
+      "matched_patterns": [
+        "us-east-1-nebula-dr"
+      ],
+      "generation_time_ms": 593.5
+    },
+    {
+      "context_target_chars": 5000,
+      "context_actual_chars": 7887,
+      "prompt_tokens": 1773,
+      "model": "gemma4:e4b",
+      "test_id": "cross_position",
+      "position": "cross",
+      "question": "What is the secret access code AND the backup server IP?",
+      "response": "Secret Access Code: ALPHA-TANGO-7749; Backup Server IP: 10.42.17.93",
+      "passed": true,
+      "matched_patterns": [
+        "ALPHA-TANGO-7749",
+        "10\\.42\\.17\\.93"
+      ],
+      "generation_time_ms": 761.8
+    },
+    {
+      "context_target_chars": 20000,
+      "context_actual_chars": 22063,
+      "prompt_tokens": 4739,
+      "model": "gemma4:e2b",
+      "test_id": "early_fact_2",
+      "position": "early",
+      "question": "What is the secret access code for Project NEBULA-7?",
+      "response": "Secret Access Code: ALPHA-TANGO-7749",
+      "passed": true,
+      "matched_patterns": [
+        "ALPHA-TANGO-7749"
+      ],
+      "generation_time_ms": 9026.6
+    },
+    {
+      "context_target_chars": 20000,
+      "context_actual_chars": 22063,
+      "prompt_tokens": 4732,
+      "model": "gemma4:e2b",
+      "test_id": "early_fact_4",
+      "position": "early",
+      "question": "What is the emergency shutdown command?",
+      "response": "NEBULA-SCRAM-OMEGA",
+      "passed": true,
+      "matched_patterns": [
+        "NEBULA-SCRAM-OMEGA"
+      ],
+      "generation_time_ms": 589.3
+    },
+    {
+      "context_target_chars": 20000,
+      "context_actual_chars": 22063,
+      "prompt_tokens": 4736,
+      "model": "gemma4:e2b",
+      "test_id": "early_fact_5",
+      "position": "early",
+      "question": "What satellite frequency does NEBULA-7 use?",
+      "response": "Satellite Frequency: 2247.5 MHz (Ku-band)",
+      "passed": true,
+      "matched_patterns": [
+        "2247[.,]5\\s*MHz",
+        "ku.?band"
+      ],
+      "generation_time_ms": 610.1
+    },
+    {
+      "context_target_chars": 20000,
+      "context_actual_chars": 22063,
+      "prompt_tokens": 4733,
+      "model": "gemma4:e2b",
+      "test_id": "late_fact_6",
+      "position": "late",
+      "question": "What is the backup server IP address?",
+      "response": "Backup Server IP: 10.42.17.93",
+      "passed": true,
+      "matched_patterns": [
+        "10\\.42\\.17\\.93"
+      ],
+      "generation_time_ms": 627.1
+    },
+    {
+      "context_target_chars": 20000,
+      "context_actual_chars": 22063,
+      "prompt_tokens": 4738,
+      "model": "gemma4:e2b",
+      "test_id": "late_fact_8",
+      "position": "late",
+      "question": "Who is the authorized pen tester and what is their contact email?",
+      "response": "The authorized pen tester is CyberShield Inc. with the contact email audit@cybershield.com.",
+      "passed": true,
+      "matched_patterns": [
+        "cybershield",
+        "audit@cybershield"
+      ],
+      "generation_time_ms": 653.4
+    },
+    {
+      "context_target_chars": 20000,
+      "context_actual_chars": 22063,
+      "prompt_tokens": 4734,
+      "model": "gemma4:e2b",
+      "test_id": "late_fact_10",
+      "position": "late",
+      "question": "What is the failover datacenter location?",
+      "response": "Failover Datacenter: us-east-1-nebula-dr",
+      "passed": true,
+      "matched_patterns": [
+        "us-east-1-nebula-dr"
+      ],
+      "generation_time_ms": 599.6
+    },
+    {
+      "context_target_chars": 20000,
+      "context_actual_chars": 22063,
+      "prompt_tokens": 4737,
+      "model": "gemma4:e2b",
+      "test_id": "cross_position",
+      "position": "cross",
+      "question": "What is the secret access code AND the backup server IP?",
+      "response": "Secret Access Code: ALPHA-TANGO-7749, Backup Server IP: 10.42.17.93",
+      "passed": true,
+      "matched_patterns": [
+        "ALPHA-TANGO-7749",
+        "10\\.42\\.17\\.93"
+      ],
+      "generation_time_ms": 699.2
+    },
+    {
+      "context_target_chars": 20000,
+      "context_actual_chars": 22063,
+      "prompt_tokens": 4739,
+      "model": "gemma4:e4b",
+      "test_id": "early_fact_2",
+      "position": "early",
+      "question": "What is the secret access code for Project NEBULA-7?",
+      "response": "ALPHA-TANGO-7749",
+      "passed": true,
+      "matched_patterns": [
+        "ALPHA-TANGO-7749"
+      ],
+      "generation_time_ms": 9249.1
+    },
+    {
+      "context_target_chars": 20000,
+      "context_actual_chars": 22063,
+      "prompt_tokens": 4732,
+      "model": "gemma4:e4b",
+      "test_id": "early_fact_4",
+      "position": "early",
+      "question": "What is the emergency shutdown command?",
+      "response": "NEBULA-SCRAM-OMEGA",
+      "passed": true,
+      "matched_patterns": [
+        "NEBULA-SCRAM-OMEGA"
+      ],
+      "generation_time_ms": 638.2
+    },
+    {
+      "context_target_chars": 20000,
+      "context_actual_chars": 22063,
+      "prompt_tokens": 4736,
+      "model": "gemma4:e4b",
+      "test_id": "early_fact_5",
+      "position": "early",
+      "question": "What satellite frequency does NEBULA-7 use?",
+      "response": "2247.5 MHz (Ku-band)",
+      "passed": true,
+      "matched_patterns": [
+        "2247[.,]5\\s*MHz",
+        "ku.?band"
+      ],
+      "generation_time_ms": 651.5
+    },
+    {
+      "context_target_chars": 20000,
+      "context_actual_chars": 22063,
+      "prompt_tokens": 4733,
+      "model": "gemma4:e4b",
+      "test_id": "late_fact_6",
+      "position": "late",
+      "question": "What is the backup server IP address?",
+      "response": "10.42.17.93",
+      "passed": true,
+      "matched_patterns": [
+        "10\\.42\\.17\\.93"
+      ],
+      "generation_time_ms": 650.2
+    },
+    {
+      "context_target_chars": 20000,
+      "context_actual_chars": 22063,
+      "prompt_tokens": 4738,
+      "model": "gemma4:e4b",
+      "test_id": "late_fact_8",
+      "position": "late",
+      "question": "Who is the authorized pen tester and what is their contact email?",
+      "response": "The authorized pen tester is CyberShield Inc. and their contact email is audit@cybershield.com.",
+      "passed": true,
+      "matched_patterns": [
+        "cybershield",
+        "audit@cybershield"
+      ],
+      "generation_time_ms": 730.0
+    },
+    {
+      "context_target_chars": 20000,
+      "context_actual_chars": 22063,
+      "prompt_tokens": 4734,
+      "model": "gemma4:e4b",
+      "test_id": "late_fact_10",
+      "position": "late",
+      "question": "What is the failover datacenter location?",
+      "response": "us-east-1-nebula-dr",
+      "passed": true,
+      "matched_patterns": [
+        "us-east-1-nebula-dr"
+      ],
+      "generation_time_ms": 626.5
+    },
+    {
+      "context_target_chars": 20000,
+      "context_actual_chars": 22063,
+      "prompt_tokens": 4737,
+      "model": "gemma4:e4b",
+      "test_id": "cross_position",
+      "position": "cross",
+      "question": "What is the secret access code AND the backup server IP?",
+      "response": "Secret Access Code: ALPHA-TANGO-7749; Backup Server IP: 10.42.17.93",
+      "passed": true,
+      "matched_patterns": [
+        "ALPHA-TANGO-7749",
+        "10\\.42\\.17\\.93"
+      ],
+      "generation_time_ms": 806.0
+    },
+    {
+      "context_target_chars": 50000,
+      "context_actual_chars": 50427,
+      "prompt_tokens": 10679,
+      "model": "gemma4:e2b",
+      "test_id": "early_fact_2",
+      "position": "early",
+      "question": "What is the secret access code for Project NEBULA-7?",
+      "response": "Secret Access Code: ALPHA-TANGO-7749",
+      "passed": true,
+      "matched_patterns": [
+        "ALPHA-TANGO-7749"
+      ],
+      "generation_time_ms": 9564.9
+    },
+    {
+      "context_target_chars": 50000,
+      "context_actual_chars": 50427,
+      "prompt_tokens": 10672,
+      "model": "gemma4:e2b",
+      "test_id": "early_fact_4",
+      "position": "early",
+      "question": "What is the emergency shutdown command?",
+      "response": "NEBULA-SCRAM-OMEGA",
+      "passed": true,
+      "matched_patterns": [
+        "NEBULA-SCRAM-OMEGA"
+      ],
+      "generation_time_ms": 619.1
+    },
+    {
+      "context_target_chars": 50000,
+      "context_actual_chars": 50427,
+      "prompt_tokens": 10676,
+      "model": "gemma4:e2b",
+      "test_id": "early_fact_5",
+      "position": "early",
+      "question": "What satellite frequency does NEBULA-7 use?",
+      "response": "Satellite Frequency: 2247.5 MHz (Ku-band)",
+      "passed": true,
+      "matched_patterns": [
+        "2247[.,]5\\s*MHz",
+        "ku.?band"
+      ],
+      "generation_time_ms": 655.1
+    },
+    {
+      "context_target_chars": 50000,
+      "context_actual_chars": 50427,
+      "prompt_tokens": 10673,
+      "model": "gemma4:e2b",
+      "test_id": "late_fact_6",
+      "position": "late",
+      "question": "What is the backup server IP address?",
+      "response": "Backup Server IP: 10.42.17.93",
+      "passed": true,
+      "matched_patterns": [
+        "10\\.42\\.17\\.93"
+      ],
+      "generation_time_ms": 654.2
+    },
+    {
+      "context_target_chars": 50000,
+      "context_actual_chars": 50427,
+      "prompt_tokens": 10678,
+      "model": "gemma4:e2b",
+      "test_id": "late_fact_8",
+      "position": "late",
+      "question": "Who is the authorized pen tester and what is their contact email?",
+      "response": "The authorized pen tester is CyberShield Inc. with the contact email audit@cybershield.com.",
+      "passed": true,
+      "matched_patterns": [
+        "cybershield",
+        "audit@cybershield"
+      ],
+      "generation_time_ms": 683.1
+    },
+    {
+      "context_target_chars": 50000,
+      "context_actual_chars": 50427,
+      "prompt_tokens": 10674,
+      "model": "gemma4:e2b",
+      "test_id": "late_fact_10",
+      "position": "late",
+      "question": "What is the failover datacenter location?",
+      "response": "Failover Datacenter: us-east-1-nebula-dr",
+      "passed": true,
+      "matched_patterns": [
+        "us-east-1-nebula-dr"
+      ],
+      "generation_time_ms": 656.7
+    },
+    {
+      "context_target_chars": 50000,
+      "context_actual_chars": 50427,
+      "prompt_tokens": 10677,
+      "model": "gemma4:e2b",
+      "test_id": "cross_position",
+      "position": "cross",
+      "question": "What is the secret access code AND the backup server IP?",
+      "response": "ANSWER: Secret Access Code: ALPHA-TANGO-7749, Backup Server IP: 10.42.17.93",
+      "passed": true,
+      "matched_patterns": [
+        "ALPHA-TANGO-7749",
+        "10\\.42\\.17\\.93"
+      ],
+      "generation_time_ms": 744.7
+    },
+    {
+      "context_target_chars": 50000,
+      "context_actual_chars": 50427,
+      "prompt_tokens": 10679,
+      "model": "gemma4:e4b",
+      "test_id": "early_fact_2",
+      "position": "early",
+      "question": "What is the secret access code for Project NEBULA-7?",
+      "response": "ALPHA-TANGO-7749",
+      "passed": true,
+      "matched_patterns": [
+        "ALPHA-TANGO-7749"
+      ],
+      "generation_time_ms": 10572.4
+    },
+    {
+      "context_target_chars": 50000,
+      "context_actual_chars": 50427,
+      "prompt_tokens": 10672,
+      "model": "gemma4:e4b",
+      "test_id": "early_fact_4",
+      "position": "early",
+      "question": "What is the emergency shutdown command?",
+      "response": "NEBULA-SCRAM-OMEGA",
+      "passed": true,
+      "matched_patterns": [
+        "NEBULA-SCRAM-OMEGA"
+      ],
+      "generation_time_ms": 668.3
+    },
+    {
+      "context_target_chars": 50000,
+      "context_actual_chars": 50427,
+      "prompt_tokens": 10676,
+      "model": "gemma4:e4b",
+      "test_id": "early_fact_5",
+      "position": "early",
+      "question": "What satellite frequency does NEBULA-7 use?",
+      "response": "2247.5 MHz (Ku-band)",
+      "passed": true,
+      "matched_patterns": [
+        "2247[.,]5\\s*MHz",
+        "ku.?band"
+      ],
+      "generation_time_ms": 681.2
+    },
+    {
+      "context_target_chars": 50000,
+      "context_actual_chars": 50427,
+      "prompt_tokens": 10673,
+      "model": "gemma4:e4b",
+      "test_id": "late_fact_6",
+      "position": "late",
+      "question": "What is the backup server IP address?",
+      "response": "10.42.17.93",
+      "passed": true,
+      "matched_patterns": [
+        "10\\.42\\.17\\.93"
+      ],
+      "generation_time_ms": 697.8
+    },
+    {
+      "context_target_chars": 50000,
+      "context_actual_chars": 50427,
+      "prompt_tokens": 10678,
+      "model": "gemma4:e4b",
+      "test_id": "late_fact_8",
+      "position": "late",
+      "question": "Who is the authorized pen tester and what is their contact email?",
+      "response": "The authorized pen tester is CyberShield Inc. and their contact email is audit@cybershield.com.",
+      "passed": true,
+      "matched_patterns": [
+        "cybershield",
+        "audit@cybershield"
+      ],
+      "generation_time_ms": 771.4
+    },
+    {
+      "context_target_chars": 50000,
+      "context_actual_chars": 50427,
+      "prompt_tokens": 10674,
+      "model": "gemma4:e4b",
+      "test_id": "late_fact_10",
+      "position": "late",
+      "question": "What is the failover datacenter location?",
+      "response": "us-east-1-nebula-dr",
+      "passed": true,
+      "matched_patterns": [
+        "us-east-1-nebula-dr"
+      ],
+      "generation_time_ms": 657.1
+    },
+    {
+      "context_target_chars": 50000,
+      "context_actual_chars": 50427,
+      "prompt_tokens": 10677,
+      "model": "gemma4:e4b",
+      "test_id": "cross_position",
+      "position": "cross",
+      "question": "What is the secret access code AND the backup server IP?",
+      "response": "The Secret Access Code is ALPHA-TANGO-7749 and the Backup Server IP is 10.42.17.93.",
+      "passed": true,
+      "matched_patterns": [
+        "ALPHA-TANGO-7749",
+        "10\\.42\\.17\\.93"
+      ],
+      "generation_time_ms": 880.9
+    },
+    {
+      "context_target_chars": 100000,
+      "context_actual_chars": 100085,
+      "prompt_tokens": 21095,
+      "model": "gemma4:e2b",
+      "test_id": "early_fact_2",
+      "position": "early",
+      "question": "What is the secret access code for Project NEBULA-7?",
+      "response": "Secret Access Code: ALPHA-TANGO-7749",
+      "passed": true,
+      "matched_patterns": [
+        "ALPHA-TANGO-7749"
+      ],
+      "generation_time_ms": 10441.6
+    },
+    {
+      "context_target_chars": 100000,
+      "context_actual_chars": 100085,
+      "prompt_tokens": 21088,
+      "model": "gemma4:e2b",
+      "test_id": "early_fact_4",
+      "position": "early",
+      "question": "What is the emergency shutdown command?",
+      "response": "NEBULA-SCRAM-OMEGA",
+      "passed": true,
+      "matched_patterns": [
+        "NEBULA-SCRAM-OMEGA"
+      ],
+      "generation_time_ms": 694.9
+    },
+    {
+      "context_target_chars": 100000,
+      "context_actual_chars": 100085,
+      "prompt_tokens": 21092,
+      "model": "gemma4:e2b",
+      "test_id": "early_fact_5",
+      "position": "early",
+      "question": "What satellite frequency does NEBULA-7 use?",
+      "response": "Satellite Frequency: 2247.5 MHz (Ku-band)",
+      "passed": true,
+      "matched_patterns": [
+        "2247[.,]5\\s*MHz",
+        "ku.?band"
+      ],
+      "generation_time_ms": 731.9
+    },
+    {
+      "context_target_chars": 100000,
+      "context_actual_chars": 100085,
+      "prompt_tokens": 21089,
+      "model": "gemma4:e2b",
+      "test_id": "late_fact_6",
+      "position": "late",
+      "question": "What is the backup server IP address?",
+      "response": "Backup Server IP: 10.42.17.93",
+      "passed": true,
+      "matched_patterns": [
+        "10\\.42\\.17\\.93"
+      ],
+      "generation_time_ms": 754.3
+    },
+    {
+      "context_target_chars": 100000,
+      "context_actual_chars": 100085,
+      "prompt_tokens": 21094,
+      "model": "gemma4:e2b",
+      "test_id": "late_fact_8",
+      "position": "late",
+      "question": "Who is the authorized pen tester and what is their contact email?",
+      "response": "The authorized pen tester is CyberShield Inc. with the contact email audit@cybershield.com.",
+      "passed": true,
+      "matched_patterns": [
+        "cybershield",
+        "audit@cybershield"
+      ],
+      "generation_time_ms": 769.9
+    },
+    {
+      "context_target_chars": 100000,
+      "context_actual_chars": 100085,
+      "prompt_tokens": 21090,
+      "model": "gemma4:e2b",
+      "test_id": "late_fact_10",
+      "position": "late",
+      "question": "What is the failover datacenter location?",
+      "response": "Failover Datacenter: us-east-1-nebula-dr",
+      "passed": true,
+      "matched_patterns": [
+        "us-east-1-nebula-dr"
+      ],
+      "generation_time_ms": 739.4
+    },
+    {
+      "context_target_chars": 100000,
+      "context_actual_chars": 100085,
+      "prompt_tokens": 21093,
+      "model": "gemma4:e2b",
+      "test_id": "cross_position",
+      "position": "cross",
+      "question": "What is the secret access code AND the backup server IP?",
+      "response": "Secret Access Code: ALPHA-TANGO-7749, Backup Server IP: 10.42.17.93",
+      "passed": true,
+      "matched_patterns": [
+        "ALPHA-TANGO-7749",
+        "10\\.42\\.17\\.93"
+      ],
+      "generation_time_ms": 812.5
+    },
+    {
+      "context_target_chars": 100000,
+      "context_actual_chars": 100085,
+      "prompt_tokens": 21095,
+      "model": "gemma4:e4b",
+      "test_id": "early_fact_2",
+      "position": "early",
+      "question": "What is the secret access code for Project NEBULA-7?",
+      "response": "ALPHA-TANGO-7749",
+      "passed": true,
+      "matched_patterns": [
+        "ALPHA-TANGO-7749"
+      ],
+      "generation_time_ms": 12864.4
+    },
+    {
+      "context_target_chars": 100000,
+      "context_actual_chars": 100085,
+      "prompt_tokens": 21088,
+      "model": "gemma4:e4b",
+      "test_id": "early_fact_4",
+      "position": "early",
+      "question": "What is the emergency shutdown command?",
+      "response": "NEBULA-SCRAM-OMEGA",
+      "passed": true,
+      "matched_patterns": [
+        "NEBULA-SCRAM-OMEGA"
+      ],
+      "generation_time_ms": 751.7
+    },
+    {
+      "context_target_chars": 100000,
+      "context_actual_chars": 100085,
+      "prompt_tokens": 21092,
+      "model": "gemma4:e4b",
+      "test_id": "early_fact_5",
+      "position": "early",
+      "question": "What satellite frequency does NEBULA-7 use?",
+      "response": "2247.5 MHz (Ku-band)",
+      "passed": true,
+      "matched_patterns": [
+        "2247[.,]5\\s*MHz",
+        "ku.?band"
+      ],
+      "generation_time_ms": 760.9
+    },
+    {
+      "context_target_chars": 100000,
+      "context_actual_chars": 100085,
+      "prompt_tokens": 21089,
+      "model": "gemma4:e4b",
+      "test_id": "late_fact_6",
+      "position": "late",
+      "question": "What is the backup server IP address?",
+      "response": "10.42.17.93",
+      "passed": true,
+      "matched_patterns": [
+        "10\\.42\\.17\\.93"
+      ],
+      "generation_time_ms": 758.1
+    },
+    {
+      "context_target_chars": 100000,
+      "context_actual_chars": 100085,
+      "prompt_tokens": 21094,
+      "model": "gemma4:e4b",
+      "test_id": "late_fact_8",
+      "position": "late",
+      "question": "Who is the authorized pen tester and what is their contact email?",
+      "response": "The authorized pen tester is CyberShield Inc. with the contact email audit@cybershield.com.",
+      "passed": true,
+      "matched_patterns": [
+        "cybershield",
+        "audit@cybershield"
+      ],
+      "generation_time_ms": 848.9
+    },
+    {
+      "context_target_chars": 100000,
+      "context_actual_chars": 100085,
+      "prompt_tokens": 21090,
+      "model": "gemma4:e4b",
+      "test_id": "late_fact_10",
+      "position": "late",
+      "question": "What is the failover datacenter location?",
+      "response": "us-east-1-nebula-dr",
+      "passed": true,
+      "matched_patterns": [
+        "us-east-1-nebula-dr"
+      ],
+      "generation_time_ms": 743.8
+    },
+    {
+      "context_target_chars": 100000,
+      "context_actual_chars": 100085,
+      "prompt_tokens": 21093,
+      "model": "gemma4:e4b",
+      "test_id": "cross_position",
+      "position": "cross",
+      "question": "What is the secret access code AND the backup server IP?",
+      "response": "The Secret Access Code is ALPHA-TANGO-7749 and the Backup Server IP is 10.42.17.93.",
+      "passed": true,
+      "matched_patterns": [
+        "ALPHA-TANGO-7749",
+        "10\\.42\\.17\\.93"
+      ],
+      "generation_time_ms": 946.9
+    }
+  ],
+  "summary": {
+    "gemma4:e2b": {
+      "total_passed": 28,
+      "total_tests": 28,
+      "overall_pass_rate": 100.0,
+      "by_context_size": {
+        "5000": {
+          "passed": 7,
+          "total": 7,
+          "pass_rate": 100.0
+        },
+        "20000": {
+          "passed": 7,
+          "total": 7,
+          "pass_rate": 100.0
+        },
+        "50000": {
+          "passed": 7,
+          "total": 7,
+          "pass_rate": 100.0
+        },
+        "100000": {
+          "passed": 7,
+          "total": 7,
+          "pass_rate": 100.0
+        }
+      }
+    },
+    "gemma4:e4b": {
+      "total_passed": 28,
+      "total_tests": 28,
+      "overall_pass_rate": 100.0,
+      "by_context_size": {
+        "5000": {
+          "passed": 7,
+          "total": 7,
+          "pass_rate": 100.0
+        },
+        "20000": {
+          "passed": 7,
+          "total": 7,
+          "pass_rate": 100.0
+        },
+        "50000": {
+          "passed": 7,
+          "total": 7,
+          "pass_rate": 100.0
+        },
+        "100000": {
+          "passed": 7,
+          "total": 7,
+          "pass_rate": 100.0
+        }
+      }
+    }
+  }
+}

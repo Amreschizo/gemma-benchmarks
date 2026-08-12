@@ -1,0 +1,268 @@
+{
+  "test": "mid_generation_context_injection",
+  "model": "google/gemma-4-E4B-it",
+  "api": "AsyncLLM.generate(StreamingInput async generator)",
+  "vllm_version": "0.27.1",
+  "enforce_eager": true,
+  "attention_backend": "TRITON_ATTN (Gemma4 on Ampere)",
+  "gpu": "1",
+  "iterations_requested": 8,
+  "iterations_successful": 8,
+  "initial_prompt": "You are a helpful assistant. Continue the story naturally.\nStory: Once upon a time, a traveler entered a dark forest.",
+  "injection_text": " Suddenly, they heard a loud roar behind them.",
+  "runs": [
+    {
+      "iteration": 1,
+      "request_id": "midgen-1-d20bd3d9",
+      "timestamps": {
+        "t0": 58739.010236517,
+        "t_first_token": 58739.04328232,
+        "t_inject_queued": 58739.04328315,
+        "t_inject_yielded": 58739.043339528,
+        "t_first_post_inject_token": 58739.075864257
+      },
+      "timestamps_ms_from_t0": {
+        "t_first_token": 33.05,
+        "t_inject_queued": 33.05,
+        "t_inject_yielded": 33.1,
+        "t_first_post_inject_token": 65.63
+      },
+      "inject_to_first_token_ms": 32.52,
+      "paused_warm_reaction_ms": 32.58,
+      "generation_to_first_token_ms": 33.05,
+      "inject_queue_to_yield_ms": 0.06,
+      "tokens_before_injection": 1,
+      "tokens_after_injection": 1,
+      "output_chunks": 2,
+      "decode_steps": 2,
+      "full_output": " Continue\n",
+      "success": true,
+      "api_error": null
+    },
+    {
+      "iteration": 2,
+      "request_id": "midgen-2-7f81fa89",
+      "timestamps": {
+        "t0": 58739.076172567,
+        "t_first_token": 58739.108527483,
+        "t_inject_queued": 58739.108528434,
+        "t_inject_yielded": 58739.108578718,
+        "t_first_post_inject_token": 58739.141771382
+      },
+      "timestamps_ms_from_t0": {
+        "t_first_token": 32.35,
+        "t_inject_queued": 32.36,
+        "t_inject_yielded": 32.41,
+        "t_first_post_inject_token": 65.6
+      },
+      "inject_to_first_token_ms": 33.19,
+      "paused_warm_reaction_ms": 33.24,
+      "generation_to_first_token_ms": 32.35,
+      "inject_queue_to_yield_ms": 0.05,
+      "tokens_before_injection": 1,
+      "tokens_after_injection": 1,
+      "output_chunks": 2,
+      "decode_steps": 2,
+      "full_output": " Continue\n",
+      "success": true,
+      "api_error": null
+    },
+    {
+      "iteration": 3,
+      "request_id": "midgen-3-f37a2baf",
+      "timestamps": {
+        "t0": 58739.14207619,
+        "t_first_token": 58739.174447335,
+        "t_inject_queued": 58739.174447695,
+        "t_inject_yielded": 58739.174487234,
+        "t_first_post_inject_token": 58739.208443049
+      },
+      "timestamps_ms_from_t0": {
+        "t_first_token": 32.37,
+        "t_inject_queued": 32.37,
+        "t_inject_yielded": 32.41,
+        "t_first_post_inject_token": 66.37
+      },
+      "inject_to_first_token_ms": 33.96,
+      "paused_warm_reaction_ms": 34.0,
+      "generation_to_first_token_ms": 32.37,
+      "inject_queue_to_yield_ms": 0.04,
+      "tokens_before_injection": 1,
+      "tokens_after_injection": 1,
+      "output_chunks": 2,
+      "decode_steps": 2,
+      "full_output": " Continue\n",
+      "success": true,
+      "api_error": null
+    },
+    {
+      "iteration": 4,
+      "request_id": "midgen-4-f430e14f",
+      "timestamps": {
+        "t0": 58739.208728518,
+        "t_first_token": 58739.241224403,
+        "t_inject_queued": 58739.241224803,
+        "t_inject_yielded": 58739.241265102,
+        "t_first_post_inject_token": 58739.275014176
+      },
+      "timestamps_ms_from_t0": {
+        "t_first_token": 32.5,
+        "t_inject_queued": 32.5,
+        "t_inject_yielded": 32.54,
+        "t_first_post_inject_token": 66.29
+      },
+      "inject_to_first_token_ms": 33.75,
+      "paused_warm_reaction_ms": 33.79,
+      "generation_to_first_token_ms": 32.5,
+      "inject_queue_to_yield_ms": 0.04,
+      "tokens_before_injection": 1,
+      "tokens_after_injection": 1,
+      "output_chunks": 2,
+      "decode_steps": 2,
+      "full_output": " Continue\n",
+      "success": true,
+      "api_error": null
+    },
+    {
+      "iteration": 5,
+      "request_id": "midgen-5-f4ac8bf4",
+      "timestamps": {
+        "t0": 58739.27537076,
+        "t_first_token": 58739.307743155,
+        "t_inject_queued": 58739.307743645,
+        "t_inject_yielded": 58739.307799062,
+        "t_first_post_inject_token": 58739.340397706
+      },
+      "timestamps_ms_from_t0": {
+        "t_first_token": 32.37,
+        "t_inject_queued": 32.37,
+        "t_inject_yielded": 32.43,
+        "t_first_post_inject_token": 65.03
+      },
+      "inject_to_first_token_ms": 32.6,
+      "paused_warm_reaction_ms": 32.65,
+      "generation_to_first_token_ms": 32.37,
+      "inject_queue_to_yield_ms": 0.06,
+      "tokens_before_injection": 1,
+      "tokens_after_injection": 1,
+      "output_chunks": 2,
+      "decode_steps": 2,
+      "full_output": " Continue\n",
+      "success": true,
+      "api_error": null
+    },
+    {
+      "iteration": 6,
+      "request_id": "midgen-6-36aa1544",
+      "timestamps": {
+        "t0": 58739.340782401,
+        "t_first_token": 58739.373982652,
+        "t_inject_queued": 58739.373983052,
+        "t_inject_yielded": 58739.374057127,
+        "t_first_post_inject_token": 58739.4069914
+      },
+      "timestamps_ms_from_t0": {
+        "t_first_token": 33.2,
+        "t_inject_queued": 33.2,
+        "t_inject_yielded": 33.27,
+        "t_first_post_inject_token": 66.21
+      },
+      "inject_to_first_token_ms": 32.93,
+      "paused_warm_reaction_ms": 33.01,
+      "generation_to_first_token_ms": 33.2,
+      "inject_queue_to_yield_ms": 0.07,
+      "tokens_before_injection": 1,
+      "tokens_after_injection": 1,
+      "output_chunks": 2,
+      "decode_steps": 2,
+      "full_output": " Continue\n",
+      "success": true,
+      "api_error": null
+    },
+    {
+      "iteration": 7,
+      "request_id": "midgen-7-a5cccf15",
+      "timestamps": {
+        "t0": 58739.40738583,
+        "t_first_token": 58739.440629531,
+        "t_inject_queued": 58739.440629881,
+        "t_inject_yielded": 58739.440688339,
+        "t_first_post_inject_token": 58739.473677088
+      },
+      "timestamps_ms_from_t0": {
+        "t_first_token": 33.24,
+        "t_inject_queued": 33.24,
+        "t_inject_yielded": 33.3,
+        "t_first_post_inject_token": 66.29
+      },
+      "inject_to_first_token_ms": 32.99,
+      "paused_warm_reaction_ms": 33.05,
+      "generation_to_first_token_ms": 33.24,
+      "inject_queue_to_yield_ms": 0.06,
+      "tokens_before_injection": 1,
+      "tokens_after_injection": 1,
+      "output_chunks": 2,
+      "decode_steps": 2,
+      "full_output": " Continue\n",
+      "success": true,
+      "api_error": null
+    },
+    {
+      "iteration": 8,
+      "request_id": "midgen-8-a6ba7692",
+      "timestamps": {
+        "t0": 58739.474031488,
+        "t_first_token": 58739.507284704,
+        "t_inject_queued": 58739.507285175,
+        "t_inject_yielded": 58739.507348955,
+        "t_first_post_inject_token": 58739.540570006
+      },
+      "timestamps_ms_from_t0": {
+        "t_first_token": 33.25,
+        "t_inject_queued": 33.25,
+        "t_inject_yielded": 33.32,
+        "t_first_post_inject_token": 66.54
+      },
+      "inject_to_first_token_ms": 33.22,
+      "paused_warm_reaction_ms": 33.28,
+      "generation_to_first_token_ms": 33.25,
+      "inject_queue_to_yield_ms": 0.06,
+      "tokens_before_injection": 1,
+      "tokens_after_injection": 1,
+      "output_chunks": 2,
+      "decode_steps": 2,
+      "full_output": " Continue\n",
+      "success": true,
+      "api_error": null
+    }
+  ],
+  "summary": {
+    "inject_to_first_token_ms": {
+      "avg": 33.15,
+      "min": 32.52,
+      "max": 33.96,
+      "count": 8
+    },
+    "paused_warm_reaction_ms": {
+      "avg": 33.2,
+      "min": 32.58,
+      "max": 34.0,
+      "count": 8
+    },
+    "generation_to_first_token_ms": {
+      "avg": 32.79,
+      "min": 32.35,
+      "max": 33.25,
+      "count": 8
+    }
+  },
+  "http_api_available": false,
+  "notes": [
+    "Mid-generation injection requires AsyncLLM Python API; not exposed via OpenAI HTTP endpoint.",
+    "StreamingInput with resumable async generator appends within a session (vLLM 0.27+).",
+    "enforce_eager=True plus warmup avoids CUDA-graph capture; Gemma 4 still uses TRITON_ATTN on Ampere.",
+    "inject_to_first_token_ms = t_first_post_inject_token - t_inject_yielded (primary metric).",
+    "paused_warm_reaction_ms = t_first_post_inject_token - t_inject_queued (includes queue/yield overhead).",
+    "Paused warm: engine is loaded, kernels JIT'd, and a generation is in-flight (WAITING_FOR_STREAMING_REQ) when new context is appended."
+  ]
+}

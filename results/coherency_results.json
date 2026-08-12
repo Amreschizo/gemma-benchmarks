@@ -1,0 +1,706 @@
+{
+  "timestamp": "2026-08-10 20:46:48",
+  "ollama_host": "http://127.0.0.1:11435",
+  "models": [
+    "gemma4:e2b",
+    "gemma4:e4b"
+  ],
+  "context_info": {
+    "moderate_context_chars": 4090,
+    "long_context_chars": 15537,
+    "fact_blocks": 10,
+    "filler_paragraphs": 24
+  },
+  "results": [
+    {
+      "model": "gemma4:e2b",
+      "test_id": "basic_recall_lead",
+      "category": "basic_recall",
+      "question": "Who is the lead engineer on Project NEBULA-7?",
+      "response": "Dr. Elena Vasquez",
+      "passed": true,
+      "matched_patterns": [
+        "elena\\s*vasquez",
+        "dr\\.?\\s*elena"
+      ],
+      "missing_patterns": [],
+      "context_length_chars": 4090,
+      "prompt_eval_count": 1317,
+      "generation_time_ms": 14677.86
+    },
+    {
+      "model": "gemma4:e2b",
+      "test_id": "basic_recall_budget",
+      "category": "basic_recall",
+      "question": "What is the total budget for Project NEBULA-7?",
+      "response": "$2.4 million",
+      "passed": true,
+      "matched_patterns": [
+        "\\$?2[.,]4\\s*million"
+      ],
+      "missing_patterns": [
+        "2,?400,?000"
+      ],
+      "context_length_chars": 4090,
+      "prompt_eval_count": 1317,
+      "generation_time_ms": 16465.98
+    },
+    {
+      "model": "gemma4:e2b",
+      "test_id": "cross_reference_milestone",
+      "category": "cross_reference",
+      "question": "What is the current blocker for Milestone M3, and what ticket number is it?",
+      "response": "Current blocker: Thermal testing failure on Module B (ticket NEB-2847)",
+      "passed": true,
+      "matched_patterns": [
+        "thermal",
+        "NEB-2847",
+        "module\\s*b"
+      ],
+      "missing_patterns": [],
+      "context_length_chars": 4090,
+      "prompt_eval_count": 1321,
+      "generation_time_ms": 14929.5
+    },
+    {
+      "model": "gemma4:e2b",
+      "test_id": "cross_reference_security",
+      "category": "cross_reference",
+      "question": "Who must sign off on production deployment, and what is the emergency security contact?",
+      "response": "Production deployment requires sign-off from Dr. Vasquez AND James Okafor. The emergency contact for security incidents is security@nebula7.internal (ext. 4401).",
+      "passed": true,
+      "matched_patterns": [
+        "vasquez",
+        "okafor",
+        "security@nebula7",
+        "4401"
+      ],
+      "missing_patterns": [],
+      "context_length_chars": 4090,
+      "prompt_eval_count": 1320,
+      "generation_time_ms": 713.41
+    },
+    {
+      "model": "gemma4:e2b",
+      "test_id": "technical_detail",
+      "category": "technical_recall",
+      "question": "What encryption algorithm and key exchange method does NEBULA-7 use?",
+      "response": "Encryption Algorithm: CRYSTALS-Kyber (NIST PQC standard)\nKey Exchange: CRYSTALS-Dilithium for signatures",
+      "passed": true,
+      "matched_patterns": [
+        "kyber",
+        "dilithium",
+        "crystals"
+      ],
+      "missing_patterns": [],
+      "context_length_chars": 4090,
+      "prompt_eval_count": 1319,
+      "generation_time_ms": 628.01
+    },
+    {
+      "model": "gemma4:e2b",
+      "test_id": "numerical_precision",
+      "category": "numerical_recall",
+      "question": "What is the unit test coverage percentage and how many integration tests are failing?",
+      "response": "Unit Test Coverage: 94.2% (target: 95%)\nIntegration Tests: 3 failing",
+      "passed": true,
+      "matched_patterns": [
+        "94[.,]2\\s*%",
+        "\\b3\\b.*fail"
+      ],
+      "missing_patterns": [
+        "fail.*\\b3\\b"
+      ],
+      "context_length_chars": 4090,
+      "prompt_eval_count": 1319,
+      "generation_time_ms": 625.14
+    },
+    {
+      "model": "gemma4:e2b",
+      "test_id": "temporal_reasoning",
+      "category": "temporal_reasoning",
+      "question": "Why was Milestone M4 postponed, and when was that decision made?",
+      "response": "The postponement of Milestone M4 was due to Module B thermal issues, and the decision was made on 2025-01-05.",
+      "passed": true,
+      "matched_patterns": [
+        "thermal",
+        "module\\s*b",
+        "2025-01-05"
+      ],
+      "missing_patterns": [
+        "january.*2025"
+      ],
+      "context_length_chars": 4090,
+      "prompt_eval_count": 1318,
+      "generation_time_ms": 661.93
+    },
+    {
+      "model": "gemma4:e2b",
+      "test_id": "financial_calculation",
+      "category": "numerical_recall",
+      "question": "How much budget remains for Project NEBULA-7, and what percentage has been spent?",
+      "response": "ANSWER: The remaining budget is $552,700, and 77.0% has been spent.",
+      "passed": true,
+      "matched_patterns": [
+        "\\$?552,?700",
+        "77\\.0"
+      ],
+      "missing_patterns": [
+        "77\\s*%"
+      ],
+      "context_length_chars": 4090,
+      "prompt_eval_count": 1323,
+      "generation_time_ms": 642.74
+    },
+    {
+      "model": "gemma4:e2b",
+      "test_id": "distractor_resistance",
+      "category": "distractor_resistance",
+      "question": "What AES encryption key length does NEBULA-7 use for its primary encryption?",
+      "response": "CRYSTALS-Kyber (NIST PQC standard)",
+      "passed": true,
+      "matched_patterns": [
+        "kyber",
+        "crystals",
+        "pqc"
+      ],
+      "missing_patterns": [
+        "not\\s+aes",
+        "no\\s+aes",
+        "post.?quantum",
+        "switched.*aes",
+        "quantum.?resistant",
+        "dilithium"
+      ],
+      "context_length_chars": 4090,
+      "prompt_eval_count": 1321,
+      "generation_time_ms": 568.17
+    },
+    {
+      "model": "gemma4:e2b",
+      "test_id": "multi_hop",
+      "category": "multi_hop",
+      "question": "Marcus Chen proposed a rewrite in what language, and was the anomaly detection module added by which team member and when?",
+      "response": "Marcus Chen proposed a Rust rewrite of the packet parser. The anomaly detection module was added by Priya Sharma on December 1, 2024.",
+      "passed": true,
+      "matched_patterns": [
+        "rust",
+        "priya\\s*sharma",
+        "december.*2024"
+      ],
+      "missing_patterns": [
+        "2024-12-01"
+      ],
+      "context_length_chars": 4090,
+      "prompt_eval_count": 1327,
+      "generation_time_ms": 672.22
+    },
+    {
+      "model": "gemma4:e2b",
+      "test_id": "distant_vendor",
+      "category": "distant_recall",
+      "question": "What is the hardware supplier for NEBULA-7 and what is their contract number?",
+      "response": "Hardware Supplier: OrbitalTech Systems (contract ORB-2024-089)",
+      "passed": true,
+      "matched_patterns": [
+        "orbitaltech",
+        "ORB-2024-089"
+      ],
+      "missing_patterns": [],
+      "context_length_chars": 15537,
+      "prompt_eval_count": 4705,
+      "generation_time_ms": 1000.74
+    },
+    {
+      "model": "gemma4:e2b",
+      "test_id": "distant_latency",
+      "category": "distant_recall",
+      "question": "What is the target latency per packet and what was Module A's benchmark result?",
+      "response": "TARGET Latency: < 12ms per packet on ARM Cortex-A78. Module A's benchmark result was 8.7ms avg latency.",
+      "passed": true,
+      "matched_patterns": [
+        "12\\s*ms",
+        "8[.,]7\\s*ms"
+      ],
+      "missing_patterns": [],
+      "context_length_chars": 15537,
+      "prompt_eval_count": 4704,
+      "generation_time_ms": 714.21
+    },
+    {
+      "model": "gemma4:e2b",
+      "test_id": "stress_basic_recall_lead",
+      "category": "long_context_stress",
+      "question": "Who is the lead engineer on Project NEBULA-7?",
+      "response": "Dr. Elena Vasquez is the lead engineer on Project NEBULA-7.",
+      "passed": true,
+      "matched_patterns": [
+        "elena\\s*vasquez",
+        "dr\\.?\\s*elena"
+      ],
+      "missing_patterns": [],
+      "context_length_chars": 15537,
+      "prompt_eval_count": 4700,
+      "generation_time_ms": 600.55
+    },
+    {
+      "model": "gemma4:e2b",
+      "test_id": "stress_basic_recall_budget",
+      "category": "long_context_stress",
+      "question": "What is the total budget for Project NEBULA-7?",
+      "response": "$2.4 million",
+      "passed": true,
+      "matched_patterns": [
+        "\\$?2[.,]4\\s*million"
+      ],
+      "missing_patterns": [
+        "2,?400,?000"
+      ],
+      "context_length_chars": 15537,
+      "prompt_eval_count": 4700,
+      "generation_time_ms": 541.84
+    },
+    {
+      "model": "gemma4:e2b",
+      "test_id": "stress_distractor_resistance",
+      "category": "long_context_stress",
+      "question": "What AES encryption key length does NEBULA-7 use for its primary encryption?",
+      "response": "The knowledge base states that NEBULA-7 uses CRYSTALS-Kyber for encryption, not AES. The Kyber-768 parameter set results in a shared secret of 32 bytes.",
+      "passed": true,
+      "matched_patterns": [
+        "kyber",
+        "crystals",
+        "not\\s+aes"
+      ],
+      "missing_patterns": [
+        "no\\s+aes",
+        "post.?quantum",
+        "pqc",
+        "switched.*aes",
+        "quantum.?resistant",
+        "dilithium"
+      ],
+      "context_length_chars": 15537,
+      "prompt_eval_count": 4704,
+      "generation_time_ms": 756.49
+    },
+    {
+      "model": "gemma4:e2b",
+      "test_id": "stress_multi_hop",
+      "category": "long_context_stress",
+      "question": "Marcus Chen proposed a rewrite in what language, and was the anomaly detection module added by which team member and when?",
+      "response": "Marcus Chen proposed a Rust rewrite of the packet parser. The anomaly detection module was added by Priya Sharma on December 1, 2024.",
+      "passed": true,
+      "matched_patterns": [
+        "rust",
+        "priya\\s*sharma",
+        "december.*2024"
+      ],
+      "missing_patterns": [
+        "2024-12-01"
+      ],
+      "context_length_chars": 15537,
+      "prompt_eval_count": 4710,
+      "generation_time_ms": 689.4
+    },
+    {
+      "model": "gemma4:e4b",
+      "test_id": "basic_recall_lead",
+      "category": "basic_recall",
+      "question": "Who is the lead engineer on Project NEBULA-7?",
+      "response": "Dr. Elena Vasquez",
+      "passed": true,
+      "matched_patterns": [
+        "elena\\s*vasquez",
+        "dr\\.?\\s*elena"
+      ],
+      "missing_patterns": [],
+      "context_length_chars": 4090,
+      "prompt_eval_count": 1317,
+      "generation_time_ms": 8812.46
+    },
+    {
+      "model": "gemma4:e4b",
+      "test_id": "basic_recall_budget",
+      "category": "basic_recall",
+      "question": "What is the total budget for Project NEBULA-7?",
+      "response": "The total budget for Project NEBULA-7 is $2.4 million.",
+      "passed": true,
+      "matched_patterns": [
+        "\\$?2[.,]4\\s*million"
+      ],
+      "missing_patterns": [
+        "2,?400,?000"
+      ],
+      "context_length_chars": 4090,
+      "prompt_eval_count": 1317,
+      "generation_time_ms": 657.57
+    },
+    {
+      "model": "gemma4:e4b",
+      "test_id": "cross_reference_milestone",
+      "category": "cross_reference",
+      "question": "What is the current blocker for Milestone M3, and what ticket number is it?",
+      "response": "The current blocker is Thermal testing failure on Module B, associated with ticket NEB-2847.",
+      "passed": true,
+      "matched_patterns": [
+        "thermal",
+        "NEB-2847",
+        "module\\s*b"
+      ],
+      "missing_patterns": [],
+      "context_length_chars": 4090,
+      "prompt_eval_count": 1321,
+      "generation_time_ms": 717.04
+    },
+    {
+      "model": "gemma4:e4b",
+      "test_id": "cross_reference_security",
+      "category": "cross_reference",
+      "question": "Who must sign off on production deployment, and what is the emergency security contact?",
+      "response": "Production deployment requires sign-off from Dr. Vasquez AND James Okafor. The emergency contact for security incidents is security@nebula7.internal (ext. 4401).",
+      "passed": true,
+      "matched_patterns": [
+        "vasquez",
+        "okafor",
+        "security@nebula7",
+        "4401"
+      ],
+      "missing_patterns": [],
+      "context_length_chars": 4090,
+      "prompt_eval_count": 1320,
+      "generation_time_ms": 842.67
+    },
+    {
+      "model": "gemma4:e4b",
+      "test_id": "technical_detail",
+      "category": "technical_recall",
+      "question": "What encryption algorithm and key exchange method does NEBULA-7 use?",
+      "response": "The encryption algorithm is CRYSTALS-Kyber (NIST PQC standard), and the key exchange uses CRYSTALS-Dilithium for signatures.",
+      "passed": true,
+      "matched_patterns": [
+        "kyber",
+        "dilithium",
+        "crystals"
+      ],
+      "missing_patterns": [],
+      "context_length_chars": 4090,
+      "prompt_eval_count": 1319,
+      "generation_time_ms": 760.34
+    },
+    {
+      "model": "gemma4:e4b",
+      "test_id": "numerical_precision",
+      "category": "numerical_recall",
+      "question": "What is the unit test coverage percentage and how many integration tests are failing?",
+      "response": "The unit test coverage is 94.2%, and there are 3 failing integration tests.",
+      "passed": true,
+      "matched_patterns": [
+        "94[.,]2\\s*%",
+        "\\b3\\b.*fail"
+      ],
+      "missing_patterns": [
+        "fail.*\\b3\\b"
+      ],
+      "context_length_chars": 4090,
+      "prompt_eval_count": 1319,
+      "generation_time_ms": 695.77
+    },
+    {
+      "model": "gemma4:e4b",
+      "test_id": "temporal_reasoning",
+      "category": "temporal_reasoning",
+      "question": "Why was Milestone M4 postponed, and when was that decision made?",
+      "response": "Milestone M4 was postponed by 2 weeks due to Module B thermal issues. This decision was made on 2025-01-05.",
+      "passed": true,
+      "matched_patterns": [
+        "thermal",
+        "module\\s*b",
+        "2025-01-05"
+      ],
+      "missing_patterns": [
+        "january.*2025"
+      ],
+      "context_length_chars": 4090,
+      "prompt_eval_count": 1318,
+      "generation_time_ms": 794.93
+    },
+    {
+      "model": "gemma4:e4b",
+      "test_id": "financial_calculation",
+      "category": "numerical_recall",
+      "question": "How much budget remains for Project NEBULA-7, and what percentage has been spent?",
+      "response": "The remaining budget for Project NEBULA-7 is $552,700, and 77.0% of the budget has been spent to date.",
+      "passed": true,
+      "matched_patterns": [
+        "\\$?552,?700",
+        "77\\.0"
+      ],
+      "missing_patterns": [
+        "77\\s*%"
+      ],
+      "context_length_chars": 4090,
+      "prompt_eval_count": 1323,
+      "generation_time_ms": 823.01
+    },
+    {
+      "model": "gemma4:e4b",
+      "test_id": "distractor_resistance",
+      "category": "distractor_resistance",
+      "question": "What AES encryption key length does NEBULA-7 use for its primary encryption?",
+      "response": "NEBULA-7 uses CRYSTALS-Kyber for its primary encryption algorithm.",
+      "passed": true,
+      "matched_patterns": [
+        "kyber",
+        "crystals"
+      ],
+      "missing_patterns": [
+        "not\\s+aes",
+        "no\\s+aes",
+        "post.?quantum",
+        "pqc",
+        "switched.*aes",
+        "quantum.?resistant",
+        "dilithium"
+      ],
+      "context_length_chars": 4090,
+      "prompt_eval_count": 1321,
+      "generation_time_ms": 649.07
+    },
+    {
+      "model": "gemma4:e4b",
+      "test_id": "multi_hop",
+      "category": "multi_hop",
+      "question": "Marcus Chen proposed a rewrite in what language, and was the anomaly detection module added by which team member and when?",
+      "response": "Marcus Chen proposed a Rust rewrite of the packet parser. The anomaly detection module was added to M3 scope by Priya Sharma on 2024-12-01.",
+      "passed": true,
+      "matched_patterns": [
+        "rust",
+        "priya\\s*sharma",
+        "2024-12-01"
+      ],
+      "missing_patterns": [
+        "december.*2024"
+      ],
+      "context_length_chars": 4090,
+      "prompt_eval_count": 1327,
+      "generation_time_ms": 834.4
+    },
+    {
+      "model": "gemma4:e4b",
+      "test_id": "distant_vendor",
+      "category": "distant_recall",
+      "question": "What is the hardware supplier for NEBULA-7 and what is their contract number?",
+      "response": "The hardware supplier for NEBULA-7 is OrbitalTech Systems, and their contract number is ORB-2024-089.",
+      "passed": true,
+      "matched_patterns": [
+        "orbitaltech",
+        "ORB-2024-089"
+      ],
+      "missing_patterns": [],
+      "context_length_chars": 15537,
+      "prompt_eval_count": 4705,
+      "generation_time_ms": 1378.96
+    },
+    {
+      "model": "gemma4:e4b",
+      "test_id": "distant_latency",
+      "category": "distant_recall",
+      "question": "What is the target latency per packet and what was Module A's benchmark result?",
+      "response": "The target latency is < 12ms per packet on ARM Cortex-A78. Module A's performance benchmark resulted in an average latency of 8.7ms, which passed the target.",
+      "passed": true,
+      "matched_patterns": [
+        "12\\s*ms",
+        "8[.,]7\\s*ms"
+      ],
+      "missing_patterns": [],
+      "context_length_chars": 15537,
+      "prompt_eval_count": 4704,
+      "generation_time_ms": 878.09
+    },
+    {
+      "model": "gemma4:e4b",
+      "test_id": "stress_basic_recall_lead",
+      "category": "long_context_stress",
+      "question": "Who is the lead engineer on Project NEBULA-7?",
+      "response": "Dr. Elena Vasquez",
+      "passed": true,
+      "matched_patterns": [
+        "elena\\s*vasquez",
+        "dr\\.?\\s*elena"
+      ],
+      "missing_patterns": [],
+      "context_length_chars": 15537,
+      "prompt_eval_count": 4700,
+      "generation_time_ms": 597.73
+    },
+    {
+      "model": "gemma4:e4b",
+      "test_id": "stress_basic_recall_budget",
+      "category": "long_context_stress",
+      "question": "What is the total budget for Project NEBULA-7?",
+      "response": "The total budget for Project NEBULA-7 is $2.4 million.",
+      "passed": true,
+      "matched_patterns": [
+        "\\$?2[.,]4\\s*million"
+      ],
+      "missing_patterns": [
+        "2,?400,?000"
+      ],
+      "context_length_chars": 15537,
+      "prompt_eval_count": 4700,
+      "generation_time_ms": 678.78
+    },
+    {
+      "model": "gemma4:e4b",
+      "test_id": "stress_distractor_resistance",
+      "category": "long_context_stress",
+      "question": "What AES encryption key length does NEBULA-7 use for its primary encryption?",
+      "response": "NEBULA-7 uses CRYSTALS-Kyber, which is a quantum-resistant algorithm, not AES. The knowledge base indicates that Kyber-512 has a security level equivalent to AES-128.",
+      "passed": true,
+      "matched_patterns": [
+        "kyber",
+        "crystals",
+        "not\\s+aes",
+        "quantum.?resistant"
+      ],
+      "missing_patterns": [
+        "no\\s+aes",
+        "post.?quantum",
+        "pqc",
+        "switched.*aes",
+        "dilithium"
+      ],
+      "context_length_chars": 15537,
+      "prompt_eval_count": 4704,
+      "generation_time_ms": 930.16
+    },
+    {
+      "model": "gemma4:e4b",
+      "test_id": "stress_multi_hop",
+      "category": "long_context_stress",
+      "question": "Marcus Chen proposed a rewrite in what language, and was the anomaly detection module added by which team member and when?",
+      "response": "Marcus Chen proposed rewriting the packet parser in Rust. Priya Sharma's anomaly detection module was added to the M3 scope on December 1, 2024.",
+      "passed": true,
+      "matched_patterns": [
+        "rust",
+        "priya\\s*sharma",
+        "december.*2024"
+      ],
+      "missing_patterns": [
+        "2024-12-01"
+      ],
+      "context_length_chars": 15537,
+      "prompt_eval_count": 4710,
+      "generation_time_ms": 845.09
+    }
+  ],
+  "summary": {
+    "gemma4:e2b": {
+      "total_tests": 16,
+      "passed": 16,
+      "failed": 0,
+      "pass_rate": 100.0,
+      "by_category": {
+        "basic_recall": {
+          "pass": 2,
+          "fail": 0,
+          "total": 2
+        },
+        "cross_reference": {
+          "pass": 2,
+          "fail": 0,
+          "total": 2
+        },
+        "technical_recall": {
+          "pass": 1,
+          "fail": 0,
+          "total": 1
+        },
+        "numerical_recall": {
+          "pass": 2,
+          "fail": 0,
+          "total": 2
+        },
+        "temporal_reasoning": {
+          "pass": 1,
+          "fail": 0,
+          "total": 1
+        },
+        "distractor_resistance": {
+          "pass": 1,
+          "fail": 0,
+          "total": 1
+        },
+        "multi_hop": {
+          "pass": 1,
+          "fail": 0,
+          "total": 1
+        },
+        "distant_recall": {
+          "pass": 2,
+          "fail": 0,
+          "total": 2
+        },
+        "long_context_stress": {
+          "pass": 4,
+          "fail": 0,
+          "total": 4
+        }
+      }
+    },
+    "gemma4:e4b": {
+      "total_tests": 16,
+      "passed": 16,
+      "failed": 0,
+      "pass_rate": 100.0,
+      "by_category": {
+        "basic_recall": {
+          "pass": 2,
+          "fail": 0,
+          "total": 2
+        },
+        "cross_reference": {
+          "pass": 2,
+          "fail": 0,
+          "total": 2
+        },
+        "technical_recall": {
+          "pass": 1,
+          "fail": 0,
+          "total": 1
+        },
+        "numerical_recall": {
+          "pass": 2,
+          "fail": 0,
+          "total": 2
+        },
+        "temporal_reasoning": {
+          "pass": 1,
+          "fail": 0,
+          "total": 1
+        },
+        "distractor_resistance": {
+          "pass": 1,
+          "fail": 0,
+          "total": 1
+        },
+        "multi_hop": {
+          "pass": 1,
+          "fail": 0,
+          "total": 1
+        },
+        "distant_recall": {
+          "pass": 2,
+          "fail": 0,
+          "total": 2
+        },
+        "long_context_stress": {
+          "pass": 4,
+          "fail": 0,
+          "total": 4
+        }
+      }
+    }
+  }
+}
